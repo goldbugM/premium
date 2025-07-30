@@ -1,0 +1,189 @@
+# PREMIUM CHAUFFEUR SERVICE - IMAGE GENERATION PROMPTS
+
+## MAIN PAGE HERO SLIDESHOW IMAGES
+
+### 1. Frankfurt Skyline with Luxury Car
+**File Name: hero-frankfurt-skyline.png**
+"Ultra-realistic photograph of Frankfurt's iconic skyline at golden hour, featuring gleaming skyscrapers and the Main River. In the foreground, a pristine black Mercedes S-Class sedan is elegantly positioned on a modern bridge or waterfront promenade. The car's chrome details catch the warm sunlight, and the scene exudes luxury and sophistication. Professional automotive photography style, cinematic lighting. Resolution: 1920x1080 (16:9), PNG format, 150-300KB file size, shot with a wide-angle lens."
+
+### 2. Paris Eiffel Tower Luxury Scene
+**File Name: hero-paris-eiffel-tower.png**
+"Cinematic photograph of the Eiffel Tower illuminated at dusk, with a sleek black BMW 7 Series positioned on the Trocadéro plaza. The car's polished surface reflects the tower's golden lights. Elegant Parisian architecture frames the scene, with warm street lighting creating a romantic, luxurious atmosphere. Professional automotive photography, dramatic lighting. Resolution: 1920x1080 (16:9), PNG format, 150-300KB file size."
+
+### 3. Amsterdam Canal Luxury Transport
+**File Name: hero-amsterdam-canals.png**
+"Sophisticated photograph of Amsterdam's historic canal district with traditional Dutch architecture. A premium black Mercedes V-Class is parked along a picturesque canal, with historic buildings and bridges reflected in the water. The scene captures the blend of classic European charm and modern luxury transportation. Golden hour lighting, professional photography, cinematic composition. Resolution: 1920x1080 (16:9), PNG format, 150-300KB file size."
+
+### 4. Swiss Alps Luxury Journey
+**File Name: hero-swiss-alps-journey.png**
+"Breathtaking mountain landscape photograph featuring the Swiss Alps with snow-capped peaks. A luxury black sedan (BMW 7 Series) is positioned on a scenic mountain road with pristine alpine scenery in the background. Crystal clear mountain air, dramatic lighting, and the contrast between rugged nature and refined luxury. Professional landscape and automotive photography combined. Resolution: 1920x1080 (16:9), PNG format, 150-300KB file size."
+
+### 5. Geneva Lake Luxury Scene
+**File Name: hero-geneva-lake.png**
+"Elegant photograph of Lake Geneva with the famous Jet d'Eau fountain in the background. A sophisticated black Mercedes S-Class is positioned on the lakefront promenade, with the Swiss Alps visible in the distance. The scene captures international luxury and diplomatic elegance. Professional photography, perfect lighting. Resolution: 1920x1080 (16:9), PNG format, 150-300KB file size."
+
+## FLEET VEHICLE IMAGES
+
+### Mercedes S-Class Collection
+
+#### S-Class Front View
+**File Name: fleet-sclass-front.png**
+"Professional studio photograph of a pristine black Mercedes S-Class sedan, front three-quarter view. The car is positioned in a modern, minimalist studio with dramatic lighting that highlights the vehicle's elegant lines, chrome grille, and LED headlights. Clean white or dark gradient background, automotive photography perfection. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size, showroom quality."
+
+#### S-Class Side Profile
+**File Name: fleet-sclass-side.png**
+"Stunning side profile photograph of a black Mercedes S-Class against a modern architectural background. The image showcases the car's sleek silhouette, elegant proportions, and luxury details. Professional automotive photography with perfect lighting that emphasizes the vehicle's premium design and craftsmanship. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### S-Class Rear View
+**File Name: fleet-sclass-rear.png**
+"Professional rear three-quarter view of a black Mercedes S-Class, highlighting the distinctive taillights, chrome exhaust tips, and elegant rear design. Modern urban setting or studio environment, dramatic lighting, automotive photography excellence. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### S-Class Interior
+**File Name: fleet-sclass-interior.png**
+"Luxurious interior photograph of a Mercedes S-Class cabin, showcasing premium leather seats, wood trim, ambient lighting, and advanced technology displays. The image should convey comfort, sophistication, and cutting-edge automotive luxury. Professional interior photography with perfect lighting. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+### BMW 7 Series Collection
+
+#### BMW 7 Front View
+**File Name: fleet-bmw7-front.png**
+"Professional studio photograph of a pristine black BMW 7 Series sedan, front three-quarter angle. The image highlights the iconic kidney grille, adaptive LED headlights, and sophisticated front design. Modern studio setting with dramatic lighting, automotive photography perfection. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### BMW 7 Side Profile
+**File Name: fleet-bmw7-side.png**
+"Elegant side profile photograph of a black BMW 7 Series against a contemporary architectural backdrop. The image showcases the vehicle's dynamic proportions, luxury design elements, and executive presence. Professional automotive photography with cinematic lighting. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### BMW 7 Rear View
+**File Name: fleet-bmw7-rear.png**
+"Professional rear three-quarter view of a black BMW 7 Series, emphasizing the distinctive taillights, dual exhaust system, and refined rear design. Clean, modern setting with dramatic lighting that highlights the vehicle's premium character. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### BMW 7 Interior
+**File Name: fleet-bmw7-interior.png**
+"Sophisticated interior photograph of a BMW 7 Series cabin, featuring premium leather upholstery, advanced infotainment system, ambient lighting, and executive comfort features. The image should convey luxury, technology, and business-class comfort. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+### Mercedes V-Class Collection
+
+#### V-Class Front View
+**File Name: fleet-vclass-front.png**
+"Professional photograph of a black Mercedes V-Class van, front three-quarter view. The image showcases the vehicle's commanding presence, modern design, and premium MPV characteristics. Studio or urban setting with professional automotive photography lighting. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### V-Class Side Profile
+**File Name: fleet-vclass-side.png**
+"Comprehensive side profile of a black Mercedes V-Class, highlighting its spacious proportions and luxury van design. The image should convey both practicality and premium quality, suitable for group transportation and airport transfers. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### V-Class Rear View
+**File Name: fleet-vclass-rear.png**
+"Professional rear three-quarter view of a Mercedes V-Class, showing the rear doors, taillights, and practical design elements. Clean, modern setting with lighting that emphasizes the vehicle's premium build quality. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+#### V-Class Interior
+**File Name: fleet-vclass-interior.png**
+"Spacious interior photograph of a Mercedes V-Class cabin, showcasing multiple rows of premium seating, ample legroom, luxury appointments, and group transportation comfort. Professional interior photography highlighting space and luxury. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+## SERVICE CATEGORY IMAGES
+
+### Executive Chauffeur Service
+**File Name: service-executive-chauffeur.png**
+"Professional business scene featuring a confident, well-dressed chauffeur in a dark suit standing beside a pristine black Mercedes S-Class. The setting is a modern corporate building or business district. The chauffeur should appear professional, trustworthy, and discrete. The image conveys executive-level service, punctuality, and business professionalism. High-quality corporate photography style. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+### VIP Transportation Service
+**File Name: service-vip-transportation.png**
+"Luxurious scene depicting VIP service with a professional chauffeur opening the door of a black BMW 7 Series for a distinguished client. The setting could be a high-end hotel, red carpet event, or exclusive venue. The image should convey exclusivity, security, and premium service. Dramatic lighting, sophisticated atmosphere, celebrity-level treatment. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+### Airport Transfer Service
+**File Name: service-airport-transfer.png**
+"Professional airport scene showing a chauffeur with a name sign waiting in an airport arrivals area, with a Mercedes V-Class visible through large windows in the background. The scene should convey reliability, punctuality, and stress-free travel. Clean, modern airport environment with professional service presentation. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+### Tourism Package Service
+**File Name: service-tourism-packages.png**
+"Scenic tourism photograph featuring a luxury vehicle (any from the fleet) positioned at a famous European landmark or scenic viewpoint. A professional chauffeur/guide is present, suggesting personalized tour services. The image should convey exploration, luxury travel, and cultural experiences. Beautiful landscape or cityscape background. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+## ADDITIONAL SERVICE DETAIL IMAGES
+
+### Meet & Greet Service
+**File Name: detail-meet-greet.png**
+"Professional photograph of a well-dressed chauffeur holding a personalized name sign in an upscale airport arrivals hall. The chauffeur appears welcoming and professional, with luxury vehicles visible in the background through large windows. The scene conveys personalized service and attention to detail. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+### Luggage Assistance
+**File Name: detail-luggage-assistance.png**
+"Professional service photograph showing a chauffeur carefully handling premium luggage beside a luxury vehicle. The scene emphasizes care, attention to detail, and full-service transportation. Clean, upscale environment with focus on service excellence. Resolution: 1200x900 (4:3), PNG format, 100-200KB file size."
+
+### Business Mobile Office
+**File Name: detail-mobile-office.png**
+"Interior photograph of a luxury sedan configured as a mobile office, with a business professional working on a laptop while being chauffeured. The image shows Wi-Fi connectivity, charging ports, and a productive travel environment. Professional business photography style. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+### Premium Amenities
+**File Name: detail-premium-amenities.png**
+"Elegant photograph showcasing luxury amenities inside a premium vehicle: bottled water, premium refreshments, newspapers, and comfort features. The image should convey attention to detail and luxury service standards. Resolution: 1200x800 (3:2), PNG format, 80-150KB file size."
+
+## TECHNICAL SPECIFICATIONS FOR ALL IMAGES
+
+### Resolution & Aspect Ratio Requirements:
+
+#### Hero Slideshow Images:
+- **Primary Resolution**: 1920x1080 (Full HD) for optimal web performance
+- **High-res Version**: 3840x2160 (4K) for future-proofing
+- **Aspect Ratio**: 16:9 (1.78:1) - Perfect for modern displays and responsive design
+- **Mobile Optimized**: 1280x720 (HD) versions recommended
+- **Format**: PNG (primary), JPEG (fallback)
+- **File Size**: 150-300KB (PNG), 300-500KB (JPEG)
+
+#### Fleet Vehicle Images:
+- **Primary Resolution**: 1200x800 (3:2 ratio) for detail shots
+- **Gallery Resolution**: 800x600 (4:3 ratio) for grid layouts
+- **Thumbnail Resolution**: 400x300 (4:3 ratio) for quick loading
+- **Aspect Ratio Options**:
+  - 3:2 (1.5:1) - Best for automotive photography
+  - 4:3 (1.33:1) - Optimal for product galleries
+  - 16:10 (1.6:1) - Good for wide vehicle shots
+- **Format**: PNG (primary), JPEG (fallback)
+- **File Size**: 80-150KB (PNG), 150-250KB (JPEG)
+
+#### Service Category Images:
+- **Primary Resolution**: 1200x900 (4:3 ratio) for service scenes
+- **Banner Resolution**: 1600x600 (8:3 ratio) for wide banners
+- **Card Resolution**: 600x400 (3:2 ratio) for service cards
+- **Aspect Ratio**: 4:3 (1.33:1) or 3:2 (1.5:1)
+- **Format**: PNG (primary), JPEG (fallback)
+- **File Size**: 100-200KB (PNG), 200-350KB (JPEG)
+
+#### Interior Detail Images:
+- **Primary Resolution**: 1200x800 (3:2 ratio)
+- **Close-up Resolution**: 800x800 (1:1 ratio) for square layouts
+- **Aspect Ratio**: 3:2 (1.5:1) or 1:1 (square)
+- **Format**: PNG (primary), JPEG (fallback)
+- **File Size**: 80-150KB (PNG), 150-250KB (JPEG)
+
+### Performance Optimization:
+- **Responsive Images**: Generate 3 sizes (mobile: 480px, tablet: 768px, desktop: 1200px+)
+- **Lazy Loading Ready**: Optimized for progressive loading
+- **Compression**: 85-90% quality for JPEG, optimized compression for PNG
+- **Color Profile**: sRGB for consistent web display
+- **Progressive JPEG**: Enable for better perceived loading speed
+
+### Photography Style:
+- Professional automotive and corporate photography
+- Dramatic but natural lighting
+- Clean, modern aesthetic
+- High contrast and sharp details
+- Consistent color grading across all images
+- Premium, luxury brand appearance
+
+### Color Palette:
+- Primary: Deep blacks and dark grays for vehicles
+- Accent: Gold/amber lighting highlights (#D4AF37)
+- Background: Modern neutrals (whites, grays, architectural elements)
+- Lighting: Warm golden hour or professional studio lighting
+
+### Composition Guidelines:
+- Rule of thirds for dynamic compositions
+- Leading lines to draw attention to vehicles
+- Negative space for text overlay capability
+- Professional depth of field
+- Consistent brand presentation across all images
+
+## USAGE NOTES:
+- Hero slideshow images should work well with text overlays
+- Fleet images need to showcase vehicle details clearly
+- Service images should convey professionalism and luxury
+- All images should maintain consistent brand aesthetic
+- Consider mobile responsiveness in composition
+- Ensure images work well in both light and dark website themes
