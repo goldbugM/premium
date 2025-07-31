@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book Your Service | Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -12,33 +13,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
 
     <style>
         .step-indicator {
-            transition: all 0.3s ease;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
         }
         .step-indicator.active {
             background-color: #D4AF37;
             color: #000;
+            transform: scale(1.1) translateZ(0);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
         }
         .step-indicator.inactive {
             background-color: #000;
             border: 1px solid #D4AF37;
             color: #D4AF37;
         }
-        .vehicle-card {
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        .vehicle-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-        }
-        .vehicle-card.selected {
-            background-color: rgba(212, 175, 55, 0.1);
-        }
         .progress-bar {
-            transition: width 0.3s ease;
+            transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Enhanced booking form styling */
+        .booking-form-card.premium-card {
+            background: rgba(26, 26, 27, 0.98) !important;
         }
     </style>
 </head>
@@ -65,6 +64,9 @@
                     </a>
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -94,6 +96,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -147,7 +152,7 @@
                 <div class="container mx-auto px-6">
                     <div class="max-w-4xl mx-auto">
                         <!-- Booking Form -->
-                        <div class="booking-form-card rounded-2xl p-8">
+                        <div class="premium-card premium-card-content booking-form-card rounded-2xl p-8">
                             <div class="text-center mb-8">
                                 <h3 class="text-3xl font-bold text-brand-gold mb-4" data-translate="booking.formTitle">Book Your Service</h3>
                                 <div class="w-16 h-1 bg-brand-gold mx-auto"></div>
@@ -288,20 +293,26 @@
                                     <div class="mb-8">
                                         <label class="block text-brand-gold text-base font-medium mb-6" data-translate="booking.selectVehicleType">Select Vehicle Type</label>
                                         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                            <div class="booking-vehicle-card rounded-lg p-6 text-center" data-vehicle="BMW 7 Series">
-                                                <div class="text-4xl mb-4">🚗</div>
-                                                <h5 class="text-white font-semibold mb-2" data-translate="booking.bmw7Series">BMW 7 Series</h5>
-                                                <p class="text-gray-400 text-sm" data-translate="booking.bmw7SeriesDesc">Luxury sedan for executive travel</p>
+                                            <div class="premium-card premium-card-content booking-vehicle-card text-center" data-vehicle="BMW 7 Series">
+                                                <div class="premium-card-image mb-4">
+                                                    <img src="assets/cars/bmw-7series/bmw7.webp" alt="BMW 7 Series" class="booking-vehicle-image">
+                                                </div>
+                                                <h5 class="premium-card-title font-semibold mb-2" data-translate="booking.bmw7Series">BMW 7 Series</h5>
+                                                <p class="premium-card-text text-sm" data-translate="booking.bmw7SeriesDesc">Luxury sedan for executive travel</p>
                                             </div>
-                                            <div class="booking-vehicle-card rounded-lg p-6 text-center" data-vehicle="Mercedes S-Class">
-                                                <div class="text-4xl mb-4">🚙</div>
-                                                <h5 class="text-white font-semibold mb-2" data-translate="booking.mercedesSClass">Mercedes S-Class</h5>
-                                                <p class="text-gray-400 text-sm" data-translate="booking.mercedesSClassDesc">Premium comfort and style</p>
+                                            <div class="premium-card premium-card-content booking-vehicle-card text-center" data-vehicle="Mercedes S-Class">
+                                                <div class="premium-card-image mb-4">
+                                                    <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Mercedes S-Class" class="booking-vehicle-image">
+                                                </div>
+                                                <h5 class="premium-card-title font-semibold mb-2" data-translate="booking.mercedesSClass">Mercedes S-Class</h5>
+                                                <p class="premium-card-text text-sm" data-translate="booking.mercedesSClassDesc">Premium comfort and style</p>
                                             </div>
-                                            <div class="booking-vehicle-card rounded-lg p-6 text-center" data-vehicle="Mercedes V-Class">
-                                                <div class="text-4xl mb-4">🚐</div>
-                                                <h5 class="text-white font-semibold mb-2" data-translate="booking.mercedesVClass">Mercedes V-Class</h5>
-                                                <p class="text-gray-400 text-sm" data-translate="booking.mercedesVClassDesc">Spacious van for groups</p>
+                                            <div class="premium-card premium-card-content booking-vehicle-card text-center" data-vehicle="Mercedes V-Class">
+                                                <div class="premium-card-image mb-4">
+                                                    <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Mercedes V-Class" class="booking-vehicle-image">
+                                                </div>
+                                                <h5 class="premium-card-title font-semibold mb-2" data-translate="booking.mercedesVClass">Mercedes V-Class</h5>
+                                                <p class="premium-card-text text-sm" data-translate="booking.mercedesVClassDesc">Spacious van for groups</p>
                                             </div>
                                         </div>
                                         <input type="hidden" name="vehicleType" id="selected-vehicle">
@@ -641,7 +652,7 @@
     </div>
 
     <script src="translations-simple.js"></script>
-    <script src="header-loader.js"></script>
+
     <script src="mobile-menu.js"></script>
     <script src="social-bubble.js"></script>
     <script>

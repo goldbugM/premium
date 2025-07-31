@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vehicle Fleet | Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="theme-toggle.js"></script>
 
 </head>
 <body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="fleet">
@@ -38,6 +40,9 @@
                     </a>
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -67,6 +72,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -117,9 +125,9 @@
                     <div class="space-y-32">
 
                     <!-- Mercedes S-Class -->
-                    <article class="fleet-card-detailed">
+                    <article class="premium-card fleet-card-detailed">
                         <!-- Intelligent Car Gallery -->
-                        <div class="car-gallery" data-car="sclass">
+                        <div class="car-gallery premium-card-image" data-car="sclass">
                             <!-- Main Display Image -->
                             <div class="main-image-container">
                                 <img id="sclass-main-image" src="assets/cars/mercedes-sclass/sclass_front.png" alt="Mercedes S-Class - Front View" class="main-car-image">
@@ -151,14 +159,14 @@
                             </div>
                         </div>
 
-                        <div class="content">
-                            <h3 data-translate="fleet.sclass.title">Mercedes S-Class</h3>
+                        <div class="content premium-card-content">
+                            <h3 class="premium-card-title" data-translate="fleet.sclass.title">Mercedes S-Class</h3>
                             <div class="spec-grid">
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.engine">Engine</span><span class="value" data-translate="fleet.sclass.engine">3.0L V6 Turbo</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.capacity">Capacity</span><span class="value" data-translate="fleet.sclass.capacity">2-3 Passengers</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.luggage">Luggage</span><span class="value" data-translate="fleet.sclass.luggage">2 Large Bags</span></div>
                             </div>
-                            <p class="text-gray-400 mb-6" data-translate="fleet.sclass.description">The definitive luxury sedan, the S-Class sets the standard for first-class travel with its elegant design and pioneering technology.</p>
+                            <p class="premium-card-text mb-6" data-translate="fleet.sclass.description">The definitive luxury sedan, the S-Class sets the standard for first-class travel with its elegant design and pioneering technology.</p>
                             <ul class="space-y-2 text-gray-300 mb-8">
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.sclass.feature1">Nappa leather seats</span></li>
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.sclass.feature2">Burmester® surround sound</span></li>
@@ -170,9 +178,9 @@
                     </article>
 
                     <!-- BMW 7 Series -->
-                     <article class="fleet-card-detailed">
+                     <article class="premium-card fleet-card-detailed">
                         <!-- Intelligent Car Gallery -->
-                        <div class="car-gallery" data-car="bmw7">
+                        <div class="car-gallery premium-card-image" data-car="bmw7">
                             <!-- Main Display Image -->
                             <div class="main-image-container">
                                 <img id="bmw7-main-image" src="assets/cars/bmw-7series/bmw7_front.png" alt="BMW 7 Series - Front View" class="main-car-image">
@@ -204,14 +212,14 @@
                             </div>
                         </div>
 
-                        <div class="content">
-                            <h3 data-translate="fleet.bmw7.title">BMW 7 Series</h3>
+                        <div class="content premium-card-content">
+                            <h3 class="premium-card-title" data-translate="fleet.bmw7.title">BMW 7 Series</h3>
                             <div class="spec-grid">
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.engine">Engine</span><span class="value" data-translate="fleet.bmw7.engine">4.4L V8</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.capacity">Capacity</span><span class="value" data-translate="fleet.bmw7.capacity">2-3 Passengers</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.luggage">Luggage</span><span class="value" data-translate="fleet.bmw7.luggage">2 Large Bags</span></div>
                             </div>
-                            <p class="text-gray-400 mb-6" data-translate="fleet.bmw7.description">Experience dynamic luxury. The BMW 7 Series combines exhilarating performance with a sophisticated interior designed for ultimate comfort.</p>
+                            <p class="premium-card-text mb-6" data-translate="fleet.bmw7.description">Experience dynamic luxury. The BMW 7 Series combines exhilarating performance with a sophisticated interior designed for ultimate comfort.</p>
                              <ul class="space-y-2 text-gray-300 mb-8">
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.bmw7.feature1">Merino leather upholstery</span></li>
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.bmw7.feature2">Bowers & Wilkins sound system</span></li>
@@ -223,9 +231,9 @@
                     </article>
 
                     <!-- Mercedes V-Class -->
-                     <article class="fleet-card-detailed">
+                     <article class="premium-card fleet-card-detailed">
                         <!-- Intelligent Car Gallery -->
-                        <div class="car-gallery" data-car="vclass">
+                        <div class="car-gallery premium-card-image" data-car="vclass">
                             <!-- Main Display Image -->
                             <div class="main-image-container">
                                 <img id="vclass-main-image" src="assets/cars/mercedes-vclass/vclass front.png" alt="Mercedes V-Class - Front View" class="main-car-image">
@@ -257,14 +265,14 @@
                             </div>
                         </div>
 
-                        <div class="content">
-                            <h3 data-translate="fleet.vclass.title">Mercedes V-Class</h3>
+                        <div class="content premium-card-content">
+                            <h3 class="premium-card-title" data-translate="fleet.vclass.title">Mercedes V-Class</h3>
                             <div class="spec-grid">
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.engine">Engine</span><span class="value" data-translate="fleet.vclass.engine">2.0L Diesel</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.capacity">Capacity</span><span class="value" data-translate="fleet.vclass.capacity">Up to 7 Passengers</span></div>
                                 <div class="spec-item"><span class="label" data-translate="fleet.specs.luggage">Luggage</span><span class="value" data-translate="fleet.vclass.luggage">5-6 Large Bags</span></div>
                             </div>
-                            <p class="text-gray-400 mb-6" data-translate="fleet.vclass.description">The V-Class is the epitome of versatile luxury, offering generous space for families, groups, or business teams without compromising on style or comfort.</p>
+                            <p class="premium-card-text mb-6" data-translate="fleet.vclass.description">The V-Class is the epitome of versatile luxury, offering generous space for families, groups, or business teams without compromising on style or comfort.</p>
                              <ul class="space-y-2 text-gray-300 mb-8">
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.vclass.feature1">Conference-style leather seating</span></li>
                                 <li class="relative pl-8 rtl:pl-0 rtl:pr-8"><i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i><span data-translate="fleet.vclass.feature2">Ample legroom and headroom</span></li>
@@ -531,7 +539,7 @@
     
     <script type="module" src="https://esm.run/framer-motion"></script>
     <script src="translations-simple.js"></script>
-    <script src="header-loader.js"></script>
+
     <script src="mobile-menu.js"></script>
     <script type="module" src="script.js"></script>
     <script src="chatbot.js"></script>

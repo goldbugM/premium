@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleet Card Effects Demo - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="fleet-demo">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-white mb-4">Fleet Card Effects Demo</h1>
+                <p class="text-gray-400 text-lg mb-8">Demonstration of blog-style card effects applied to the Fleet page</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">Hover over the vehicle cards to see premium effects!</span>
+                </div>
+            </div>
+
+            <!-- Fleet Card Demo -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Enhanced Fleet Cards</h2>
+                
+                <!-- Mercedes S-Class Demo -->
+                <article class="premium-card fleet-card-detailed mb-16">
+                    <div class="car-gallery premium-card-image" data-car="sclass-demo">
+                        <div class="main-image-container">
+                            <img src="assets/cars/mercedes-sclass/sclass_front.png" alt="Mercedes S-Class - Front View" class="main-car-image w-full h-64 object-cover">
+                            <div class="image-overlay">
+                                <div class="view-indicator">
+                                    <span>Front View</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-nav p-4 flex justify-center space-x-2">
+                            <button class="gallery-btn active px-3 py-2 text-sm">
+                                <i data-lucide="car-front" class="w-4 h-4 inline mr-1"></i>
+                                <span>Front</span>
+                            </button>
+                            <button class="gallery-btn px-3 py-2 text-sm">
+                                <i data-lucide="car" class="w-4 h-4 inline mr-1"></i>
+                                <span>Side</span>
+                            </button>
+                            <button class="gallery-btn px-3 py-2 text-sm">
+                                <i data-lucide="car-front" class="w-4 h-4 inline mr-1 rotate-180"></i>
+                                <span>Rear</span>
+                            </button>
+                            <button class="gallery-btn px-3 py-2 text-sm">
+                                <i data-lucide="armchair" class="w-4 h-4 inline mr-1"></i>
+                                <span>Interior</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content premium-card-content">
+                        <h3 class="premium-card-title text-2xl font-bold mb-4">Mercedes S-Class</h3>
+                        <div class="spec-grid grid grid-cols-3 gap-4 text-sm">
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">Engine</span>
+                                <span class="value block text-white font-semibold">3.0L V6 Turbo</span>
+                            </div>
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">Capacity</span>
+                                <span class="value block text-white font-semibold">2-3 Passengers</span>
+                            </div>
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">Luggage</span>
+                                <span class="value block text-white font-semibold">2 Large Bags</span>
+                            </div>
+                        </div>
+                        <p class="premium-card-text mb-6">The definitive luxury sedan, the S-Class sets the standard for first-class travel with its elegant design and pioneering technology.</p>
+                        
+                        <ul class="space-y-2 text-gray-300 mb-8">
+                            <li class="relative pl-8">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 top-0"></i>
+                                <span>Nappa leather seats</span>
+                            </li>
+                            <li class="relative pl-8">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 top-0"></i>
+                                <span>Burmester® surround sound</span>
+                            </li>
+                            <li class="relative pl-8">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 top-0"></i>
+                                <span>Ambient lighting</span>
+                            </li>
+                            <li class="relative pl-8">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold absolute left-0 top-0"></i>
+                                <span>Complimentary Wi-Fi & refreshments</span>
+                            </li>
+                        </ul>
+                        <a href="booking-form.html" class="btn btn-primary">Book Now</a>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Feature Highlights -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Fleet Card Features</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="image" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">Interactive Gallery</h3>
+                        <p class="premium-card-text text-sm">Multiple vehicle views with smooth image transitions and hover effects</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="settings" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">Enhanced Specs</h3>
+                        <p class="premium-card-text text-sm">Beautifully styled specification grids with golden accents</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="sparkles" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">Premium Effects</h3>
+                        <p class="premium-card-text text-sm">Backdrop blur, golden shadows, and smooth hover animations</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Comparison -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Before vs After</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title">Before Enhancement</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-gray-500 rounded-full mr-3"></span>
+                                <span class="text-white">Basic card styling</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-gray-500 rounded-full mr-3"></span>
+                                <span class="text-white">Simple hover effects</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-gray-500 rounded-full mr-3"></span>
+                                <span class="text-white">Standard shadows</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title">After Enhancement</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-brand-gold rounded-full mr-3"></span>
+                                <span class="text-white">Blog-style premium cards</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-brand-gold rounded-full mr-3"></span>
+                                <span class="text-white">Smooth lift animations</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-brand-gold rounded-full mr-3"></span>
+                                <span class="text-white">Golden shadow accents</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-brand-gold rounded-full mr-3"></span>
+                                <span class="text-white">Backdrop blur effects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Links -->
+            <div class="text-center">
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title">Explore Enhanced Fleet</h3>
+                    <p class="premium-card-text mb-6">Visit the fleet page to see all vehicles with premium card effects</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="fleet.html" class="btn btn-primary text-sm">Fleet Page</a>
+                        <a href="card-effects-demo.html" class="btn btn-secondary text-sm">All Effects</a>
+                        <a href="tourism-contact-demo.html" class="btn btn-secondary text-sm">Tourism & Contact</a>
+                        <a href="index.html" class="btn btn-secondary text-sm">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

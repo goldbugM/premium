@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourism Everywhere - Premium Chauffeur Services</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
 
 </head>
 <body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="Tourism_Packages">
@@ -38,6 +40,9 @@
                     </a>
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -67,6 +72,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -118,87 +126,99 @@
                         <h2 class="text-3xl font-bold text-brand-gold mb-8 text-center" data-translate="tourism.themeParksTitle">Theme Parks & Entertainment</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <!-- Europa Park -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/europa-park.webp" alt="Europa Park" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/europa-park.webp" alt="Europa Park">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.europaPark.title">Europa Park</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.europaPark.description">
-                                    Germany's largest theme park with thrilling rides and European-themed areas.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.europaPark.title">Europa Park</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.europaPark.description">
+                                        Germany's largest theme park with thrilling rides and European-themed areas.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- LEGOLAND -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/legoland.webp" alt="LEGOLAND" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/legoland.webp" alt="LEGOLAND">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.legoland.title">LEGOLAND</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.legoland.description">
-                                    Perfect family destination with LEGO-themed attractions and interactive experiences.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.legoland.title">LEGOLAND</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.legoland.description">
+                                        Perfect family destination with LEGO-themed attractions and interactive experiences.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Phantasialand -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/phantasialand.webp" alt="Phantasialand" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/phantasialand.webp" alt="Phantasialand">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.phantasialand.title">Phantasialand</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.phantasialand.description">
-                                    Award-winning theme park with world-class roller coasters and themed worlds.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.phantasialand.title">Phantasialand</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.phantasialand.description">
+                                        Award-winning theme park with world-class roller coasters and themed worlds.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Heide Park -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/heide-park.webp" alt="Heide Park" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/heide-park.webp" alt="Heide Park">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.heidePark.title">Heide Park Resort</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.heidePark.description">
-                                    Northern Germany's largest amusement park with extreme rides and attractions.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.heidePark.title">Heide Park Resort</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.heidePark.description">
+                                        Northern Germany's largest amusement park with extreme rides and attractions.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Movie Park -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/movie-park.webp" alt="Movie Park" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/movie-park.webp" alt="Movie Park">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.moviePark.title">Movie Park Germany</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.moviePark.description">
-                                    Hollywood-themed park with movie-inspired rides and shows.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.moviePark.title">Movie Park Germany</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.moviePark.description">
+                                        Hollywood-themed park with movie-inspired rides and shows.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Disneyland Paris -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/disneyland-paris.webp" alt="Disneyland Paris" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/disneyland-paris.webp" alt="Disneyland Paris">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.disneylandParis.title">Disneyland Paris</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.disneylandParis.description">
-                                    Magical Disney experience with classic attractions and European charm.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
-                                    Book Visit
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.disneylandParis.title">Disneyland Paris</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.disneylandParis.description">
+                                        Magical Disney experience with classic attractions and European charm.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookVisitBtn">
+                                        Book Visit
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -208,45 +228,51 @@
                         <h2 class="text-3xl font-bold text-brand-gold mb-8 text-center" data-translate="tourism.shoppingToursTitle">Luxury Shopping Tours</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                             <!-- Outletcity Metzingen -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/outletcity-metzingen.webp" alt="Outletcity Metzingen" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/outletcity-metzingen.webp" alt="Outletcity Metzingen">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.outletcityMetzingen.title">Outletcity Metzingen</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.outletcityMetzingen.description">
-                                    Premium outlet with luxury brands like Hugo Boss, Escada, and more.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
-                                    Book Shopping Tour
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.outletcityMetzingen.title">Outletcity Metzingen</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.outletcityMetzingen.description">
+                                        Premium outlet with luxury brands like Hugo Boss, Escada, and more.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
+                                        Book Shopping Tour
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Wertheim Village -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/wertheim-village.webp" alt="Wertheim Village" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/wertheim-village.webp" alt="Wertheim Village">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.wertheimVillage.title">Wertheim Village</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.wertheimVillage.description">
-                                    Chic outlet village near Frankfurt with international designer brands.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
-                                    Book Shopping Tour
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.wertheimVillage.title">Wertheim Village</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.wertheimVillage.description">
+                                        Chic outlet village near Frankfurt with international designer brands.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
+                                        Book Shopping Tour
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- Designer Outlet Roermond -->
-                            <div class="service-card">
-                                <div class="mb-6">
-                                    <img src="assets/slideshow/designer-outlet-roermond.webp" alt="Designer Outlet Roermond" class="w-full h-64 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/slideshow/designer-outlet-roermond.webp" alt="Designer Outlet Roermond">
                                 </div>
-                                <h3 class="text-xl font-bold mb-4 text-white" data-translate="tourism.designerOutletRoermond.title">Designer Outlet Roermond</h3>
-                                <p class="text-slate-300 mb-6" data-translate="tourism.designerOutletRoermond.description">
-                                    Dutch outlet center with over 200 designer brands and boutiques.
-                                </p>
-                                <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
-                                    Book Shopping Tour
-                                </a>
+                                <div class="premium-card-content">
+                                    <h3 class="premium-card-title" data-translate="tourism.designerOutletRoermond.title">Designer Outlet Roermond</h3>
+                                    <p class="premium-card-text mb-6" data-translate="tourism.designerOutletRoermond.description">
+                                        Dutch outlet center with over 200 designer brands and boutiques.
+                                    </p>
+                                    <a href="booking-form.html" class="btn btn-primary" data-translate="tourism.bookShoppingTourBtn">
+                                        Book Shopping Tour
+                                    </a>
+                                </div>
                             </div>
 
                             <!-- La Vallée Village -->
@@ -542,7 +568,7 @@
     </div>
 
     <script src="translations-simple.js"></script>
-    <script src="header-loader.js"></script>
+
     <script src="mobile-menu.js"></script>
 
     <script>

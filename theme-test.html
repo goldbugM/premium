@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Toggle Test - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="test">
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+        <i data-lucide="sun" class="w-5 h-5"></i>
+    </button>
+
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-white mb-4">Theme Toggle Test</h1>
+                <p class="text-gray-400 text-lg">Click the theme toggle button to switch between light and dark modes</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-brand-dark-gray p-6 rounded-lg dot-grid-bg">
+                    <h2 class="section-title text-2xl mb-4">Dark Mode Features</h2>
+                    <p class="section-subtitle">This section demonstrates the dark theme styling with dot grid background.</p>
+                    <button class="btn btn-primary mt-4">Primary Button</button>
+                </div>
+
+                <div class="bg-brand-dark-gray p-6 rounded-lg">
+                    <h2 class="section-title text-2xl mb-4">Light Mode Features</h2>
+                    <p class="section-subtitle">This section will show light theme styling when toggled.</p>
+                    <button class="btn btn-secondary mt-4">Secondary Button</button>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg">
+                    <span class="font-semibold">Current Theme: <span id="current-theme">Dark</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme management
+        let currentTheme = localStorage.getItem('theme') || 'dark';
+        
+        function initializeTheme() {
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            updateThemeIcon();
+            updateThemeDisplay();
+        }
+        
+        function toggleTheme() {
+            currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            document.documentElement.setAttribute('data-theme', currentTheme);
+            localStorage.setItem('theme', currentTheme);
+            updateThemeIcon();
+            updateThemeDisplay();
+        }
+        
+        function updateThemeIcon() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const icon = themeToggle.querySelector('i');
+            if (currentTheme === 'light') {
+                icon.setAttribute('data-lucide', 'moon');
+                themeToggle.title = 'Switch to Dark Mode';
+            } else {
+                icon.setAttribute('data-lucide', 'sun');
+                themeToggle.title = 'Switch to Light Mode';
+            }
+            // Recreate icons
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        }
+
+        function updateThemeDisplay() {
+            const themeDisplay = document.getElementById('current-theme');
+            themeDisplay.textContent = currentTheme === 'light' ? 'Light' : 'Dark';
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeTheme();
+            
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                themeToggle.addEventListener('click', toggleTheme);
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Chauffeur Travel Blog | Premium Chauffeur</title>
+    <meta name="description" content="Discover luxury travel experiences in Germany and Europe with Premium Chauffeur. Explore destinations, automotive heritage, and exclusive experiences.">
+    <meta name="keywords" content="luxury travel, premium chauffeur, European destinations">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Premium Chauffeur Travel Blog | Premium Chauffeur">
+    <meta property="og:description" content="Discover luxury travel experiences in Germany and Europe with Premium Chauffeur. Explore destinations, automotive heritage, and exclusive experiences.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="public/images/default-hero.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://premium-chauffeur.com/">
+    
+    <!-- Premium Chauffeur Theme Init -->
+    <script src="../theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+
+    <!-- Premium Chauffeur Styles -->
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../social-bubble.css">
+    <link rel="stylesheet" href="../language.css">
+    <link rel="stylesheet" href="../business-card.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Icons and Libraries -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="../theme-toggle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Blog Custom CSS -->
+    <link rel="stylesheet" href="public/css/main.css">
+    
+    
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="blog">
+    <!-- Header -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 navbar-transparent transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="../index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity">
+                    <div class="w-10 h-10 flex items-center justify-center">
+                        <img src="../assets/logo.svg" alt="Premium Chauffeur Logo" class="w-8 h-8 rotating-logo">
+                    </div>
+                    <div class="text-xl font-bold text-brand-gold">
+                        PREMIUM CHAUFFEUR
+                    </div>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                    <a href="../services.html" class="nav-link" data-page="services" data-translate="nav.services">
+                        Services
+                    </a>
+                    <a href="../fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
+                        Fleet
+                    </a>
+                    <a href="index.html" class="nav-link active" data-page="blog" data-translate="nav.blog">
+                        Blog
+                    </a>
+                    <a href="../destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
+                        Destinations
+                    </a>
+                    <a href="../Tourism_Packages.html" class="nav-link" data-page="Tourism_Packages" data-translate="nav.tourism_packages">
+                        Tourism
+                    </a>
+                    <a href="../contact.html" class="nav-link" data-page="contact" data-translate="nav.contact">
+                        Contact
+                    </a>
+                    <a href="../booking-form.html" class="btn btn-primary text-sm px-6 py-2" data-translate="nav.book_now">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Tablet Navigation (medium screens) -->
+                <div class="hidden md:flex lg:hidden items-center space-x-4">
+                    <a href="../services.html" class="nav-link text-sm" data-page="services" data-translate="nav.services">
+                        Services
+                    </a>
+                    <a href="../fleet.html" class="nav-link text-sm" data-page="fleet" data-translate="nav.fleet">
+                        Fleet
+                    </a>
+                    <a href="index.html" class="nav-link text-sm active" data-page="blog" data-translate="nav.blog">
+                        Blog
+                    </a>
+                    <a href="../destinations.html" class="nav-link text-sm" data-page="destinations" data-translate="nav.destinations">
+                        Destinations
+                    </a>
+                    <a href="../contact.html" class="nav-link text-sm" data-page="contact" data-translate="nav.contact">
+                        Contact
+                    </a>
+                    <a href="../booking-form.html" class="btn btn-primary text-xs px-4 py-2" data-translate="nav.book_now">
+                        Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-brand-light hover:text-brand-gold transition-colors">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="md:hidden mt-4 pb-4 border-t border-gray-800/50 hidden">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="../services.html" class="mobile-nav-link" data-page="services" data-translate="nav.services">
+                        Services
+                    </a>
+                    <a href="../fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
+                        Fleet
+                    </a>
+                    <a href="index.html" class="mobile-nav-link active" data-page="blog" data-translate="nav.blog">
+                        Blog
+                    </a>
+                    <a href="../destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
+                        Destinations
+                    </a>
+                    <a href="../Tourism_Packages.html" class="mobile-nav-link" data-page="Tourism_Packages" data-translate="nav.tourism_packages">
+                        Tourism
+                    </a>
+                    <a href="../contact.html" class="mobile-nav-link" data-page="contact" data-translate="nav.contact">
+                        Contact
+                    </a>
+
+                    <!-- Mobile Language Selector -->
+                    <div class="border-t border-gray-800/50 pt-4 mt-4">
+                        <div class="text-sm text-gray-400 mb-2" data-translate="nav.language">Language</div>
+                        <div class="flex flex-wrap gap-2">
+                            <button onclick="selectLanguage('en')" class="mobile-lang-btn px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition-colors text-xs text-white">
+                                EN
+                            </button>
+                            <button onclick="selectLanguage('ar')" class="mobile-lang-btn px-2 py-1 rounded bg-gray-800 hover:bg-gray-700 transition-colors text-xs text-white">
+                                AR
+                            </button>
+                        </div>
+                    </div>
+
+                    <a href="../booking-form.html" class="btn btn-primary text-sm px-6 py-2 mt-4 inline-block text-center" data-translate="nav.book_now">
+                        Book Now
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+        <i data-lucide="sun" class="w-5 h-5"></i>
+    </button>
+
+    <!-- Floating Language Selector -->
+    <div id="floating-language-selector" class="fixed bottom-6 right-6 z-50" style="transition: opacity 0.3s ease, transform 0.3s ease;">
+        <div class="language-selector-container relative">
+            <!-- Main Language Button -->
+            <button id="lang-toggle-btn" class="flex items-center justify-center w-9 h-9 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110" style="
+                background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+                border: 2px solid #D4AF37;
+                box-shadow:
+                    0 4px 12px rgba(0, 0, 0, 0.6),
+                    0 0 0 1px rgba(212, 175, 55, 0.4),
+                    inset 0 1px 5px rgba(212, 175, 55, 0.15),
+                    inset 0 -1px 3px rgba(0, 0, 0, 0.3);
+                color: #D4AF37;
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+            ">
+                <span id="current-lang">EN</span>
+            </button>
+
+            <!-- Language Options -->
+            <div id="lang-options" class="absolute bottom-full right-0 mb-2 opacity-0 pointer-events-none transition-all duration-300 transform translate-y-2">
+                <div class="flex flex-col gap-1 p-2 rounded-lg shadow-xl" style="
+                    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+                    border: 1px solid rgba(212, 175, 55, 0.3);
+                    box-shadow:
+                        0 8px 25px rgba(0, 0, 0, 0.8),
+                        0 0 0 1px rgba(212, 175, 55, 0.2),
+                        inset 0 1px 5px rgba(212, 175, 55, 0.1);
+                ">
+                    <button onclick="selectLanguage('en')" class="lang-option px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 hover:bg-brand-gold hover:text-brand-dark" style="color: #D4AF37;">
+                        English
+                    </button>
+                    <button onclick="selectLanguage('ar')" class="lang-option px-3 py-1.5 rounded text-xs font-medium transition-all duration-200 hover:bg-brand-gold hover:text-brand-dark" style="color: #D4AF37;">
+                        العربية
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <main>
+        
+        
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title serif">Luxury Travel Experiences</h1>
+        <p class="hero-subtitle">Discover Germany's finest destinations and European luxury experiences</p>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search destinations..." class="search-input">
+            <i class="fas fa-search search-icon"></i>
+        </div>
+
+        <div class="category-navigation">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="german-destinations">German</button>
+            <button class="category-btn" data-category="european-destinations">European</button>
+            <button class="category-btn" data-category="automotive-experiences">Automotive</button>
+            <button class="category-btn" data-category="alpine-retreats">Alpine</button>
+            <button class="category-btn" data-category="coastal-elegance">Coastal</button>
+            <button class="category-btn" data-category="theme-parks">Parks</button>
+            <button class="category-btn" data-category="shopping-destinations">Shopping</button>
+        </div>
+
+
+    </div>
+</section>
+
+
+
+<!-- German Destinations Section -->
+<section id="german-destinations" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/berlin-hero.png" alt="German Destinations">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">German Destinations</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/baden-baden-hero.png" alt="Baden-Baden: Elegant Spa Town in the Black Forest">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Baden-Baden, Germany</span>
+                        </div>
+                        <h3 class="card-title">Baden-Baden: Elegant Spa Town in the Black Forest</h3>
+                        <p class="card-excerpt">Indulge in 2,000 years of spa tradition with thermal baths, luxury hotels like Brenners Park, the famous casino, and world-class cultural venues in Germany&#39;s most elegant resort town.</p>
+                        <a href="guides/baden-baden-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/berlin-hero.png" alt="Berlin: Germany&#39;s Dynamic Capital &amp; Cultural Hub">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Berlin, Germany</span>
+                        </div>
+                        <h3 class="card-title">Berlin: Germany&#39;s Dynamic Capital &amp; Cultural Hub</h3>
+                        <p class="card-excerpt">Journey through history and culture in Germany&#39;s vibrant capital, from the iconic Brandenburg Gate to Museum Island, luxury hotels, and the powerful legacy of reunification.</p>
+                        <a href="guides/berlin-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/black-forest-hero.png" alt="Black Forest: Scenic Region of Cuckoo Clocks &amp; Cake">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Regions</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Black Forest, Germany</span>
+                        </div>
+                        <h3 class="card-title">Black Forest: Scenic Region of Cuckoo Clocks &amp; Cake</h3>
+                        <p class="card-excerpt">Journey through Germany&#39;s most enchanting region, famous for cuckoo clocks, Black Forest cake, luxury spas, Michelin-starred dining, and 23,000 kilometers of hiking trails.</p>
+                        <a href="guides/black-forest-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/cologne-hero.png" alt="Cologne: Cathedral City &amp; Cultural Metropolis">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Cologne, Germany</span>
+                        </div>
+                        <h3 class="card-title">Cologne: Cathedral City &amp; Cultural Metropolis</h3>
+                        <p class="card-excerpt">Experience 2,000 years of history in Germany&#39;s art capital, home to the magnificent Gothic cathedral, world-class museums, luxury shopping, and the famous Chocolate Museum.</p>
+                        <a href="guides/cologne-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/frankfurt-hero.png" alt="Frankfurt: Financial Hub &amp; Goethe&#39;s Birthplace">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Frankfurt, Germany</span>
+                        </div>
+                        <h3 class="card-title">Frankfurt: Financial Hub &amp; Goethe&#39;s Birthplace</h3>
+                        <p class="card-excerpt">Explore Mainhattan&#39;s unique blend of financial power and cultural heritage, featuring Goethe&#39;s birthplace, world-class museums, luxury shopping on Goethestrasse, and exceptional dining.</p>
+                        <a href="guides/frankfurt-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/hamburg-hero.png" alt="Hamburg: Maritime City with Historic Harbor">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Hamburg, Germany</span>
+                        </div>
+                        <h3 class="card-title">Hamburg: Maritime City with Historic Harbor</h3>
+                        <p class="card-excerpt">Experience Germany&#39;s gateway to the world with its UNESCO World Heritage Speicherstadt, the stunning Elbphilharmonie, luxury shopping on Neuer Wall, and family-friendly Miniatur Wunderland.</p>
+                        <a href="guides/hamburg-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/heidelberg-hero.png" alt="Heidelberg: Romantic University City &amp; Castle">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Heidelberg, Germany</span>
+                        </div>
+                        <h3 class="card-title">Heidelberg: Romantic University City &amp; Castle</h3>
+                        <p class="card-excerpt">Discover the quintessential German romantic city with its magnificent castle ruins, Germany&#39;s oldest university, charming Old Town, and the famous Philosopher&#39;s Walk.</p>
+                        <a href="guides/heidelberg-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/munich-hero.png" alt="Munich: Bavarian Capital with Alpine Charm">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Bavaria</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Munich, Germany</span>
+                        </div>
+                        <h3 class="card-title">Munich: Bavarian Capital with Alpine Charm</h3>
+                        <p class="card-excerpt">Discover Munich&#39;s perfect blend of tradition and sophistication, from Oktoberfest celebrations to luxury shopping on Maximilianstrasse, world-class museums, and proximity to fairy-tale castles.</p>
+                        <a href="guides/munich-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/stuttgart-hero.png" alt="Stuttgart: Automotive Capital &amp; Cultural Center">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">German Cities</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Stuttgart, Germany</span>
+                        </div>
+                        <h3 class="card-title">Stuttgart: Automotive Capital &amp; Cultural Center</h3>
+                        <p class="card-excerpt">Explore the birthplace of the automobile with Mercedes-Benz and Porsche museums, luxury automotive experiences, world-class opera, and beautiful surrounding vineyards.</p>
+                        <a href="guides/stuttgart-guide/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- European Destinations Section -->
+<section id="european-destinations" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/paris-hero.png" alt="European Destinations">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">European Destinations</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/amsterdam-hero.png" alt="Amsterdam: Iconic Canals &amp; Cultural Heritage">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">European Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Amsterdam, Netherlands</span>
+                        </div>
+                        <h3 class="card-title">Amsterdam: Iconic Canals &amp; Cultural Heritage</h3>
+                        <p class="card-excerpt">Explore the Venice of the North with its UNESCO World Heritage canals, world-class museums like the Van Gogh Museum, luxury shopping, and unique cycling culture.</p>
+                        <a href="guides/amsterdam-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/tirol-hero.png" alt="Austrian Alps: Tirol&#39;s Hidden Gems">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Austrian Alps</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tirol, Austria</span>
+                        </div>
+                        <h3 class="card-title">Austrian Alps: Tirol&#39;s Hidden Gems</h3>
+                        <p class="card-excerpt">Discover Tirol&#39;s exclusive mountain retreats, imperial Alpine heritage, luxury ski resorts, and traditional Austrian hospitality in pristine mountain settings.</p>
+                        <a href="guides/austrian-alps-tirol/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/dubrovnik-hero.png" alt="Croatian Adriatic Coast: Dubrovnik&#39;s Ancient Elegance">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Adriatic Coast</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dubrovnik, Croatia</span>
+                        </div>
+                        <h3 class="card-title">Croatian Adriatic Coast: Dubrovnik&#39;s Ancient Elegance</h3>
+                        <p class="card-excerpt">Discover Croatia&#39;s pristine Adriatic coastline with Dubrovnik&#39;s UNESCO World Heritage beauty, luxury island retreats, crystal-clear waters, and emerging Mediterranean luxury.</p>
+                        <a href="guides/croatian-adriatic-dubrovnik/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/geneva-hero.png" alt="Geneva: International Diplomacy &amp; Alpine Luxury">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Swiss Cities</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Geneva, Switzerland</span>
+                        </div>
+                        <h3 class="card-title">Geneva: International Diplomacy &amp; Alpine Luxury</h3>
+                        <p class="card-excerpt">Experience Switzerland&#39;s international city with luxury watchmaking, UN headquarters, Lake Geneva beauty, CERN scientific discoveries, and world-class hospitality.</p>
+                        <a href="guides/geneva-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/interlaken-hero.png" alt="Interlaken: Alpine Adventure &amp; Luxury Resort">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Swiss Alps</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Interlaken, Switzerland</span>
+                        </div>
+                        <h3 class="card-title">Interlaken: Alpine Adventure &amp; Luxury Resort</h3>
+                        <p class="card-excerpt">Discover the gateway to the Jungfrau region with luxury mountain resorts, helicopter tours, the Top of Europe experience, and breathtaking Alpine scenery.</p>
+                        <a href="guides/interlaken-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/luxembourg-hero.png" alt="Luxembourg: Medieval Charm &amp; Modern Prosperity">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">European Capitals</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Luxembourg</span>
+                        </div>
+                        <h3 class="card-title">Luxembourg: Medieval Charm &amp; Modern Prosperity</h3>
+                        <p class="card-excerpt">Explore Europe&#39;s hidden gem with UNESCO World Heritage sites, underground fortress casemates, international finance, and intimate European capital charm.</p>
+                        <a href="guides/luxembourg-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/monaco-hero.png" alt="Monaco: From Port Hercule to Casino de Monte-Carlo">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">French Riviera</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Monaco</span>
+                        </div>
+                        <h3 class="card-title">Monaco: From Port Hercule to Casino de Monte-Carlo</h3>
+                        <p class="card-excerpt">Experience Monaco&#39;s legendary luxury from the superyacht harbor of Port Hercule to the iconic Casino de Monte-Carlo, with exclusive access to royal glamour and Mediterranean sophistication.</p>
+                        <a href="guides/monaco-port-hercule-casino/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/paris-hero.png" alt="Paris: City of Light &amp; Luxury">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">European Capitals</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+                        </div>
+                        <h3 class="card-title">Paris: City of Light &amp; Luxury</h3>
+                        <p class="card-excerpt">Discover the global capital of luxury, fashion, and art with the Louvre, Champs-Élysées shopping, palace hotels, Michelin-starred dining, and iconic landmarks.</p>
+                        <a href="guides/paris-guide/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- Automotive Experiences Section -->
+<section id="automotive-experiences" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/bmw-hero.png" alt="Automotive Experiences">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">Automotive Experiences</h2>
+                </div>
+            </div>
+
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/bmw-hero.png" alt="BMW Ultimate Driving: Munich&#39;s Innovation Hub">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Automotive Heritage</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Munich, Germany</span>
+                        </div>
+                        <h3 class="card-title">BMW Ultimate Driving: Munich&#39;s Innovation Hub</h3>
+                        <p class="card-excerpt">Discover BMW&#39;s world of innovation at BMW Welt, experience professional driving instruction, explore Alpine routes, and enjoy exclusive M Performance consultations.</p>
+                        <a href="guides/bmw-experience/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/mercedes-hero.png" alt="Mercedes-Benz Excellence: Stuttgart&#39;s Automotive Legacy">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Automotive Heritage</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Stuttgart, Germany</span>
+                        </div>
+                        <h3 class="card-title">Mercedes-Benz Excellence: Stuttgart&#39;s Automotive Legacy</h3>
+                        <p class="card-excerpt">Experience 130 years of automotive innovation with exclusive factory tours, VIP museum access, AMG driving experiences, and luxury chauffeur services in vintage Mercedes models.</p>
+                        <a href="guides/mercedes-experience/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/porsche-hero.png" alt="Porsche Sports Car Excellence: Stuttgart&#39;s Racing Heritage">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Automotive Heritage</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Stuttgart, Germany</span>
+                        </div>
+                        <h3 class="card-title">Porsche Sports Car Excellence: Stuttgart&#39;s Racing Heritage</h3>
+                        <p class="card-excerpt">Experience Porsche&#39;s legendary sports car heritage with exclusive factory tours, professional racing instruction, and access to the world&#39;s most iconic sports car collection.</p>
+                        <a href="guides/porsche-experience/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- Alpine Retreats Section -->
+<section id="alpine-retreats" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/alpine-retreats-hero.png" alt="Alpine Retreats">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">Alpine Retreats</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/alpine-retreats-hero.png" alt="Alpine Retreats: Luxury Mountain Experiences">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Alpine Destinations</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Alps</span>
+                        </div>
+                        <h3 class="card-title">Alpine Retreats: Luxury Mountain Experiences</h3>
+                        <p class="card-excerpt">Discover exclusive Alpine luxury with Zermatt&#39;s Matterhorn views, Austrian mountain resorts, Swiss wellness spas, and helicopter tours through pristine mountain landscapes.</p>
+                        <a href="guides/alpine-retreats/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/tirol-hero.png" alt="Austrian Alps: Tirol&#39;s Hidden Gems">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Austrian Alps</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Tirol, Austria</span>
+                        </div>
+                        <h3 class="card-title">Austrian Alps: Tirol&#39;s Hidden Gems</h3>
+                        <p class="card-excerpt">Discover Tirol&#39;s exclusive mountain retreats, imperial Alpine heritage, luxury ski resorts, and traditional Austrian hospitality in pristine mountain settings.</p>
+                        <a href="guides/austrian-alps-tirol/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/interlaken-hero.png" alt="Interlaken: Alpine Adventure &amp; Luxury Resort">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Swiss Alps</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Interlaken, Switzerland</span>
+                        </div>
+                        <h3 class="card-title">Interlaken: Alpine Adventure &amp; Luxury Resort</h3>
+                        <p class="card-excerpt">Discover the gateway to the Jungfrau region with luxury mountain resorts, helicopter tours, the Top of Europe experience, and breathtaking Alpine scenery.</p>
+                        <a href="guides/interlaken-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/swiss-peaks-hero.png" alt="Swiss Luxury Among the Peaks">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Swiss Alps</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Switzerland</span>
+                        </div>
+                        <h3 class="card-title">Swiss Luxury Among the Peaks</h3>
+                        <p class="card-excerpt">Experience the pinnacle of Alpine luxury with exclusive Swiss mountain resorts, private helicopter tours, world-class spas, and Michelin-starred dining in pristine mountain settings.</p>
+                        <a href="guides/swiss-luxury-peaks/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/zermatt-hero.png" alt="Zermatt: Pearl of the Swiss Alps">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Swiss Alps</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Zermatt, Switzerland</span>
+                        </div>
+                        <h3 class="card-title">Zermatt: Pearl of the Swiss Alps</h3>
+                        <p class="card-excerpt">Experience Zermatt&#39;s car-free luxury with iconic Matterhorn views, exclusive mountain hotels, world-class skiing, and pristine Alpine beauty in Switzerland&#39;s most prestigious mountain resort.</p>
+                        <a href="guides/zermatt-pearl-alps/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- Coastal Elegance Section -->
+<section id="coastal-elegance" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/coastal-elegance-hero.png" alt="Coastal Elegance">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">Coastal Elegance</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/coastal-elegance-hero.png" alt="Coastal Elegance: Mediterranean Luxury &amp; Riviera Glamour">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Coastal Destinations</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> European Coast</span>
+                        </div>
+                        <h3 class="card-title">Coastal Elegance: Mediterranean Luxury &amp; Riviera Glamour</h3>
+                        <p class="card-excerpt">Experience the ultimate in coastal luxury with French Riviera glamour, Monaco&#39;s Monte Carlo, Croatian Adriatic beauty, and exclusive yacht charters along pristine Mediterranean coastlines.</p>
+                        <a href="guides/coastal-elegance/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/dubrovnik-hero.png" alt="Croatian Adriatic Coast: Dubrovnik&#39;s Ancient Elegance">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Adriatic Coast</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dubrovnik, Croatia</span>
+                        </div>
+                        <h3 class="card-title">Croatian Adriatic Coast: Dubrovnik&#39;s Ancient Elegance</h3>
+                        <p class="card-excerpt">Discover Croatia&#39;s pristine Adriatic coastline with Dubrovnik&#39;s UNESCO World Heritage beauty, luxury island retreats, crystal-clear waters, and emerging Mediterranean luxury.</p>
+                        <a href="guides/croatian-adriatic-dubrovnik/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/french-riviera-hero.png" alt="French Riviera Yacht Experiences">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">French Riviera</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> French Riviera</span>
+                        </div>
+                        <h3 class="card-title">French Riviera Yacht Experiences</h3>
+                        <p class="card-excerpt">Experience the ultimate in French Riviera luxury with private yacht charters, exclusive beach clubs, Cannes glamour, and sophisticated Mediterranean lifestyle.</p>
+                        <a href="guides/french-riviera-yacht/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/monaco-hero.png" alt="Monaco: From Port Hercule to Casino de Monte-Carlo">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">French Riviera</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Monaco</span>
+                        </div>
+                        <h3 class="card-title">Monaco: From Port Hercule to Casino de Monte-Carlo</h3>
+                        <p class="card-excerpt">Experience Monaco&#39;s legendary luxury from the superyacht harbor of Port Hercule to the iconic Casino de Monte-Carlo, with exclusive access to royal glamour and Mediterranean sophistication.</p>
+                        <a href="guides/monaco-port-hercule-casino/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- Theme Parks Section -->
+<section id="theme-parks" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/theme-parks-collection-hero.png" alt="Theme Parks">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">Theme Parks & Entertainment</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/disneyland-paris-hero.png" alt="Disneyland Paris: European Disney Magic">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+                        </div>
+                        <h3 class="card-title">Disneyland Paris: European Disney Magic</h3>
+                        <p class="card-excerpt">Experience the magic of Disney in Europe with two theme parks, luxury hotels, and exclusive experiences at Disneyland Paris, featuring beloved Disney stories and characters.</p>
+                        <a href="guides/disneyland-paris-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/europa-park-hero.png" alt="Europa Park: Germany&#39;s Premier Theme Park">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Rust, Germany</span>
+                        </div>
+                        <h3 class="card-title">Europa Park: Germany&#39;s Premier Theme Park</h3>
+                        <p class="card-excerpt">Experience Europa Park in Rust, Germany&#39;s largest theme park, featuring world-class roller coasters, European-themed areas, luxury accommodations, and the spectacular Rulantica water world.</p>
+                        <a href="guides/europa-park-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/heide-park-hero.png" alt="Heide Park: Northern Germany&#39;s Thrill Capital">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Soltau, Germany</span>
+                        </div>
+                        <h3 class="card-title">Heide Park: Northern Germany&#39;s Thrill Capital</h3>
+                        <p class="card-excerpt">Experience Northern Germany&#39;s largest theme park in Soltau, featuring record-breaking roller coasters and family attractions.</p>
+                        <a href="guides/heide-park-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/legoland-hero.png" alt="LEGOLAND: Family Adventure Destination">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Günzburg, Germany</span>
+                        </div>
+                        <h3 class="card-title">LEGOLAND: Family Adventure Destination</h3>
+                        <p class="card-excerpt">Experience the magic of LEGO at this family-friendly theme park, featuring interactive attractions, building workshops, and themed areas designed for children aged 2-12 and their families.</p>
+                        <a href="guides/legoland-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/movie-park-hero.png" alt="Movie Park Germany: Hollywood in Bottrop">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 13 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Bottrop, Germany</span>
+                        </div>
+                        <h3 class="card-title">Movie Park Germany: Hollywood in Bottrop</h3>
+                        <p class="card-excerpt">Step into the world of cinema at Germany&#39;s film-themed park, featuring movie-based attractions and stunt shows.</p>
+                        <a href="guides/movie-park-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/phantasialand-hero.png" alt="Phantasialand: Award-Winning Theme Park Excellence">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Theme Parks</span>
+                            <span><i class="fas fa-clock"></i> 12 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Brühl, Germany</span>
+                        </div>
+                        <h3 class="card-title">Phantasialand: Award-Winning Theme Park Excellence</h3>
+                        <p class="card-excerpt">Explore Germany&#39;s most awarded theme park in Brühl, featuring immersive themed worlds, cutting-edge roller coasters, and spectacular shows.</p>
+                        <a href="guides/phantasialand-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/theme-parks-collection-hero.png" alt="Theme Parks &amp; Entertainment: Europe&#39;s Premier Family Destinations">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Entertainment</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                        </div>
+                        <h3 class="card-title">Theme Parks &amp; Entertainment: Europe&#39;s Premier Family Destinations</h3>
+                        <p class="card-excerpt">Discover Europe&#39;s most exciting theme parks and entertainment destinations with premium chauffeur services, from Europa Park&#39;s thrills to Disneyland Paris magic.</p>
+                        <a href="guides/theme-parks-entertainment/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+<!-- Shopping Destinations Section -->
+<section id="shopping-destinations" class="blog-section active">
+    <div class="container">
+        <div class="theme-section">
+            <div class="theme-image">
+                <img src="public/images/shopping-collection-hero.png" alt="Shopping Destinations">
+                <div class="theme-overlay">
+                    <h2 class="theme-title serif">Shopping Destinations</h2>
+                </div>
+            </div>
+            
+            <div class="blog-grid"><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/roermond-hero.png" alt="Designer Outlet Roermond: 200+ Premium Brands">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Outlet Shopping</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Roermond, Netherlands</span>
+                        </div>
+                        <h3 class="card-title">Designer Outlet Roermond: 200+ Premium Brands</h3>
+                        <p class="card-excerpt">Experience the Netherlands&#39; largest designer outlet with over 200 brands and luxury services near the German border.</p>
+                        <a href="guides/roermond-outlet-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/ingolstadt-village-hero.png" alt="Ingolstadt Village: Bavarian Luxury Shopping">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Outlet Shopping</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Ingolstadt, Germany</span>
+                        </div>
+                        <h3 class="card-title">Ingolstadt Village: Bavarian Luxury Shopping</h3>
+                        <p class="card-excerpt">Discover premium shopping in Bavaria with luxury brands, traditional German craftsmanship, and exclusive services in this charming outlet village setting.</p>
+                        <a href="guides/ingolstadt-village-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/la-vallee-village-hero.png" alt="La Vallée Village: Parisian Luxury Outlet">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Outlet Shopping</span>
+                            <span><i class="fas fa-clock"></i> 7 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Paris, France</span>
+                        </div>
+                        <h3 class="card-title">La Vallée Village: Parisian Luxury Outlet</h3>
+                        <p class="card-excerpt">Shop French luxury brands near Paris at this elegant outlet village featuring prestigious fashion houses and exclusive collections.</p>
+                        <a href="guides/la-vallee-village-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/metzingen-hero.png" alt="Outletcity Metzingen: Hugo Boss &amp; Luxury Brands">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Outlet Shopping</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Metzingen, Germany</span>
+                        </div>
+                        <h3 class="card-title">Outletcity Metzingen: Hugo Boss &amp; Luxury Brands</h3>
+                        <p class="card-excerpt">Discover Germany&#39;s premier luxury outlet destination in Metzingen, home to Hugo Boss headquarters and over 60 premium brands offering exclusive collections at exceptional prices.</p>
+                        <a href="guides/metzingen-outlet-guide/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/shopping-collection-hero.png" alt="Shopping Destinations: Europe&#39;s Premier Luxury Outlets">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Shopping</span>
+                            <span><i class="fas fa-clock"></i> 10 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Europe</span>
+                        </div>
+                        <h3 class="card-title">Shopping Destinations: Europe&#39;s Premier Luxury Outlets</h3>
+                        <p class="card-excerpt">Discover Europe&#39;s finest shopping destinations, from luxury designer outlets to exclusive boutiques, with premium chauffeur services for the ultimate retail experience.</p>
+                        <a href="guides/shopping-destinations/" class="read-more">Read More</a>
+                    </div>
+                </article><article class="blog-card">
+                    <div class="card-image">
+                        <img src="public/images/wertheim-village-hero.png" alt="Wertheim Village: Frankfurt&#39;s Designer Outlet">
+                    </div>
+                    <div class="card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Outlet Shopping</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Wertheim, Germany</span>
+                        </div>
+                        <h3 class="card-title">Wertheim Village: Frankfurt&#39;s Designer Outlet</h3>
+                        <p class="card-excerpt">Discover luxury shopping near Frankfurt with over 110 boutiques featuring international designer brands and premium services.</p>
+                        <a href="guides/wertheim-village-guide/" class="read-more">Read More</a>
+                    </div>
+                </article></div>
+        </div>
+    </div>
+</section>
+
+        
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-brand-dark py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Company Info -->
+                <div class="col-span-1">
+                    <a href="../index.html" class="flex items-center gap-3 mb-4">
+                        <img src="../assets/logo.svg" alt="Premium Chauffeur Logo" class="w-8 h-8 rotating-logo">
+                        <p class="text-white text-lg font-bold tracking-wider uppercase">
+                            Premium Chauffeur
+                        </p>
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed" data-translate="footer.companyDescription">
+                        Experience luxury transportation with our premium chauffeur services. Professional drivers, luxury vehicles, and exceptional service across Germany and Europe.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-span-1">
+                    <h3 class="text-white text-lg font-bold mb-4" data-translate="footer.quickLinks">Quick Links</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <a href="../services.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.services">Services</a>
+                        <a href="../fleet.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.fleet">Fleet</a>
+                        <a href="index.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.blog">Blog</a>
+                        <a href="../destinations.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.destinations">Destinations</a>
+                        <a href="../Tourism_Packages.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.tourism_packages">Tourism</a>
+                        <a href="../contact.html" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="nav.contact">Contact</a>
+                    </div>
+                </div>
+
+                <!-- Services -->
+                <div class="col-span-1">
+                    <h3 class="text-white text-lg font-bold mb-4" data-translate="footer.servicesTitle">Services</h3>
+                    <div class="grid grid-cols-1 gap-2">
+                        <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.airportTransfer">Airport Transfer</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.chauffeurService">Chauffeur Service</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.vipService">VIP Service</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.businessTravel">Business Travel</a>
+                        <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.eventTransportation">Event Transportation</a>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="col-span-1">
+                    <h3 class="text-white text-lg font-bold mb-4" data-translate="footer.contactInfo">Contact Info</h3>
+                    <div class="space-y-3">
+                        <div class="flex items-start text-gray-400 text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4 mr-3 mt-1 text-brand-gold flex-shrink-0"></i>
+                            <div>
+                                <span class="text-white font-medium block" data-translate="footer.address">Address:</span>
+                                <span data-translate="footer.addressText">Luxusstraße 123, 10115 Berlin, Germany</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i data-lucide="phone" class="w-4 h-4 mr-3 text-brand-gold flex-shrink-0"></i>
+                            <div>
+                                <span class="text-white font-medium" data-translate="footer.phone">Phone:</span>
+                                <a href="tel:+4917631454340" class="ml-2 hover:text-brand-gold transition-colors">+49 176 31454340</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i data-lucide="mail" class="w-4 h-4 mr-3 text-brand-gold flex-shrink-0"></i>
+                            <div>
+                                <span class="text-white font-medium" data-translate="footer.email">Email:</span>
+                                <a href="mailto:info@premium-chauffeur.com" class="ml-2 hover:text-brand-gold transition-colors">info@premium-chauffeur.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center text-gray-400 text-sm">
+                            <i data-lucide="clock" class="w-4 h-4 mr-3 text-brand-gold flex-shrink-0"></i>
+                            <div>
+                                <span class="text-white font-medium" data-translate="footer.hours">Hours:</span>
+                                <span class="ml-2" data-translate="footer.hoursText">24/7 Available</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Payment Methods and Social Media -->
+            <div class="flex flex-col lg:flex-row justify-between items-center border-t border-gray-800 pt-8 mt-8">
+                <!-- Payment Methods -->
+                <div class="flex items-center gap-4 mb-6 lg:mb-0">
+                    <span class="text-white text-sm font-medium mr-2" data-translate="footer.weAccept">We Accept:</span>
+                    <div class="flex gap-3">
+                        <div class="w-10 h-6 bg-blue-600 rounded flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">VISA</span>
+                        </div>
+                        <div class="w-10 h-6 bg-red-600 rounded flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">MC</span>
+                        </div>
+                        <div class="w-10 h-6 bg-blue-800 rounded flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">AMEX</span>
+                        </div>
+                        <div class="w-10 h-6 bg-blue-500 rounded flex items-center justify-center">
+                            <span class="text-white text-xs font-bold">PP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Media -->
+                <div class="flex items-center gap-4">
+                    <span class="text-white text-sm font-medium mr-2" data-translate="footer.followUs">Follow Us:</span>
+                    <div class="flex gap-3">
+                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                            <i data-lucide="twitter" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <a href="https://wa.me/4917631454340" target="_blank" rel="noopener noreferrer"
+                           class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-gold hover:text-brand-dark transition-all duration-300">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal Links and Copyright -->
+            <div class="flex flex-col lg:flex-row justify-between items-center border-t border-gray-800 pt-6 mt-6">
+                <div class="flex flex-wrap gap-6 mb-4 lg:mb-0">
+                    <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.privacyPolicy">Privacy Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.termsOfService">Terms of Service</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.cookiePolicy">Cookie Policy</a>
+                    <a href="#" class="text-gray-400 text-sm hover:text-brand-gold transition-colors duration-300" data-translate="footer.imprint">Imprint</a>
+                </div>
+
+                <div class="text-center lg:text-right">
+                    <p class="text-gray-400 text-sm" data-translate="footer.copyright">
+                        &copy; <span id="current-year">2025</span> Premium Chauffeur. All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Update current year
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+
+    
+    <!-- Premium Chauffeur JavaScript -->
+    <script type="module" src="https://esm.run/framer-motion"></script>
+    <script src="../translations-simple.js"></script>
+    <script src="../mobile-menu.js"></script>
+    <script src="../script.js"></script>
+    <script src="../chatbot.js"></script>
+    <script src="../social-bubble.js"></script>
+    <script src="../business-card.js"></script>
+
+    <!-- Blog JavaScript -->
+    <script src="public/js/LightRays.js"></script>
+    <script src="public/js/main.js"></script>
+
+</body>
+</html>

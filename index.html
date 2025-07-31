@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -15,9 +16,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="theme-toggle.js"></script>
 
 </head>
-<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="home">
+<body class="bg-white text-gray-900 font-sans antialiased" data-page="home">
 
 
     <!-- Header -->
@@ -42,6 +44,9 @@
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
                     </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
+                    </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
                     </a>
@@ -51,9 +56,15 @@
                     <a href="contact.html" class="nav-link" data-page="contact" data-translate="nav.contact">
                         Contact
                     </a>
+
                     <a href="booking-form.html" class="btn btn-primary text-sm px-6 py-2" data-translate="nav.book_now">
                         Book Now
                     </a>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle" class="p-2 rounded-lg bg-brand-gold/10 hover:bg-brand-gold/20 transition-all duration-300 transform hover:scale-110" title="Toggle Light/Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 text-brand-gold"></i>
+                    </button>
                 </div>
 
                 <!-- Tablet Navigation (medium screens) -->
@@ -64,21 +75,38 @@
                     <a href="fleet.html" class="nav-link text-sm" data-page="fleet" data-translate="nav.fleet">
                         Fleet
                     </a>
+                    <a href="blog/index.html" class="nav-link text-sm" data-page="blog" data-translate="nav.blog">
+                        Blog
+                    </a>
                     <a href="destinations.html" class="nav-link text-sm" data-page="destinations" data-translate="nav.destinations">
                         Destinations
                     </a>
                     <a href="contact.html" class="nav-link text-sm" data-page="contact" data-translate="nav.contact">
                         Contact
                     </a>
+
                     <a href="booking-form.html" class="btn btn-primary text-xs px-4 py-2" data-translate="nav.book_now">
                         Book Now
                     </a>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-tablet" class="p-2 rounded-lg bg-brand-gold/10 hover:bg-brand-gold/20 transition-all duration-300 transform hover:scale-110" title="Toggle Light/Dark Mode">
+                        <i data-lucide="moon" class="w-4 h-4 text-brand-gold"></i>
+                    </button>
                 </div>
 
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-btn" class="md:hidden text-brand-light hover:text-brand-gold transition-colors">
-                    <i data-lucide="menu" class="w-6 h-6"></i>
-                </button>
+                <!-- Mobile Controls -->
+                <div class="md:hidden flex items-center space-x-3">
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="text-brand-light hover:text-brand-gold transition-colors">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+
+                    <!-- Theme Toggle Button -->
+                    <button id="theme-toggle-mobile" class="p-2 rounded-lg bg-brand-gold/10 hover:bg-brand-gold/20 transition-all duration-300 transform hover:scale-110" title="Toggle Light/Dark Mode">
+                        <i data-lucide="moon" class="w-5 h-5 text-brand-gold"></i>
+                    </button>
+                </div>
             </div>
 
             <!-- Mobile Navigation -->
@@ -89,6 +117,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -120,6 +151,8 @@
             </div>
         </nav>
     </header>
+
+
 
     <!-- Floating Language Selector -->
     <div id="floating-language-selector" class="fixed bottom-6 right-6 z-50" style="transition: opacity 0.3s ease, transform 0.3s ease;">
@@ -589,13 +622,13 @@
             <section id="services" class="py-20 md:py-28 bg-brand-dark-gray dot-grid-bg">
                 <div class="container mx-auto px-6">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div class="premium-card premium-card-content">
                             <div class="flex items-center mb-6">
                                 <i data-lucide="briefcase" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.executiveTitle">Executive Chauffeur Service</h2>
+                                <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.executiveTitle">Executive Chauffeur Service</h2>
                             </div>
-                            <p class="text-gray-400 text-lg mb-8" data-translate="services.executiveDescription">Designed for the discerning business professional, our executive service guarantees punctuality, discretion, and a seamless travel experience. We provide a mobile office environment, allowing you to remain productive while on the move.</p>
-                            
+                            <p class="premium-card-text text-lg mb-8" data-translate="services.executiveDescription">Designed for the discerning business professional, our executive service guarantees punctuality, discretion, and a seamless travel experience. We provide a mobile office environment, allowing you to remain productive while on the move.</p>
+
                             <div class="space-y-4">
                                 <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
                                     <i data-lucide="check-circle" class="w-6 h-6 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i>
@@ -611,8 +644,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="relative">
-                            <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Executive Chauffeur Service" class="w-full h-96 object-cover rounded-lg">
+                        <div class="premium-card">
+                            <div class="premium-card-image">
+                                <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Executive Chauffeur Service" class="service-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -622,13 +657,13 @@
             <section class="py-20 md:py-28 bg-brand-dark dot-grid-bg">
                 <div class="container mx-auto px-6">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div class="lg:order-2">
+                        <div class="lg:order-2 premium-card premium-card-content">
                             <div class="flex items-center mb-6">
                                 <i data-lucide="star" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.vipTitle">VIP Transportation</h2>
+                                <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.vipTitle">VIP Transportation</h2>
                             </div>
-                            <p class="text-gray-400 text-lg mb-8" data-translate="services.vipDescription">For those who require the utmost in luxury, security, and exclusivity. Our VIP service caters to celebrities, dignitaries, and high-profile clients for red carpet events, state visits, and private engagements. Your safety and privacy are our highest priorities.</p>
-                            
+                            <p class="premium-card-text text-lg mb-8" data-translate="services.vipDescription">For those who require the utmost in luxury, security, and exclusivity. Our VIP service caters to celebrities, dignitaries, and high-profile clients for red carpet events, state visits, and private engagements. Your safety and privacy are our highest priorities.</p>
+
                             <div class="space-y-4">
                                 <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
                                     <i data-lucide="check-circle" class="w-6 h-6 text-brand-gold absolute left-0 rtl:left-auto rtl:right-0 top-0"></i>
@@ -644,8 +679,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="lg:order-1 relative">
-                            <img src="assets/cars/bmw-7series/bmw7.webp" alt="VIP Transportation" class="w-full h-96 object-cover rounded-lg">
+                        <div class="lg:order-1 premium-card">
+                            <div class="premium-card-image">
+                                <img src="assets/cars/bmw-7series/bmw7.webp" alt="VIP Transportation" class="service-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -655,12 +692,12 @@
             <section class="py-20 md:py-28 bg-brand-dark dot-grid-bg">
                 <div class="container mx-auto px-6">
                     <div class="grid lg:grid-cols-2 gap-12 items-center">
-                        <div>
+                        <div class="premium-card premium-card-content">
                             <div class="flex items-center mb-6">
                                 <i data-lucide="plane" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.airportTitle">Airport Transfer Service</h2>
+                                <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.airportTitle">Airport Transfer Service</h2>
                             </div>
-                            <p class="text-gray-400 text-lg mb-8" data-translate="services.airportDescription">Begin or end your journey in complete comfort and style. We offer premium, reliable transfers to and from all major airports. Our service includes flight tracking, meet-and-greet services, and luggage assistance for a stress-free experience.</p>
+                            <p class="premium-card-text text-lg mb-8" data-translate="services.airportDescription">Begin or end your journey in complete comfort and style. We offer premium, reliable transfers to and from all major airports. Our service includes flight tracking, meet-and-greet services, and luggage assistance for a stress-free experience.</p>
 
                             <div class="space-y-4">
                                 <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
@@ -677,8 +714,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="relative">
-                            <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Airport Transfer Service" class="w-full h-96 object-cover rounded-lg">
+                        <div class="premium-card">
+                            <div class="premium-card-image">
+                                <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Airport Transfer Service" class="service-image">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -771,21 +810,21 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             <!-- Tourism Button -->
-                            <a href="tourism.html" class="group bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 rounded-lg p-6 text-center transform hover:scale-105 hover:shadow-xl">
+                            <a href="tourism.html" class="premium-card premium-card-content group text-center transform hover:scale-105">
                                 <div class="flex items-center justify-center mb-3">
-                                    <i data-lucide="camera" class="w-8 h-8 mr-3"></i>
-                                    <span class="text-xl font-semibold" data-translate="contact.tourismButton">Tourism Packages</span>
+                                    <i data-lucide="camera" class="w-8 h-8 mr-3 text-brand-gold"></i>
+                                    <span class="premium-card-title text-xl font-semibold" data-translate="contact.tourismButton">Tourism Packages</span>
                                 </div>
-                                <p class="text-base opacity-80" data-translate="contact.tourismDesc">Luxury travel experiences</p>
+                                <p class="premium-card-text text-base" data-translate="contact.tourismDesc">Luxury travel experiences</p>
                             </a>
 
                             <!-- Destinations Button -->
-                            <a href="destinations.html" class="group bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 rounded-lg p-6 text-center transform hover:scale-105 hover:shadow-xl">
+                            <a href="destinations.html" class="premium-card premium-card-content group text-center transform hover:scale-105">
                                 <div class="flex items-center justify-center mb-3">
-                                    <i data-lucide="map-pin" class="w-8 h-8 mr-3"></i>
-                                    <span class="text-xl font-semibold" data-translate="contact.destinationsButton">Premium Destinations</span>
+                                    <i data-lucide="map-pin" class="w-8 h-8 mr-3 text-brand-gold"></i>
+                                    <span class="premium-card-title text-xl font-semibold" data-translate="contact.destinationsButton">Premium Destinations</span>
                                 </div>
-                                <p class="text-base opacity-80" data-translate="contact.destinationsDesc">Exclusive travel locations</p>
+                                <p class="premium-card-text text-base" data-translate="contact.destinationsDesc">Exclusive travel locations</p>
                             </a>
                         </div>
                     </div>

@@ -7,12 +7,35 @@
     --color-light: #E2E8F0;
     --color-gold: #D4AF37;
     --color-gold-hover: #E0C160;
+
+    /* Light mode colors */
+    --light-bg: #ffffff;
+    --light-bg-secondary: #f8f9fa;
+    --light-text: #333333;
+    --light-text-secondary: #666666;
+    --light-border: #e5e5e5;
+}
+
+/* Light mode theme */
+[data-theme="light"] {
+    --color-dark: #ffffff;
+    --color-dark-gray: #f8f9fa;
+    --color-light: #333333;
+    --color-gold: #D4AF37;
+    --color-gold-hover: #E0C160;
 }
 
 body {
     background-color: var(--color-dark) !important;
     color: var(--color-light);
     font-family: 'Inter', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode body styling */
+[data-theme="light"] body {
+    background-color: var(--light-bg) !important;
+    color: var(--light-text);
 }
 
 body.no-scroll {
@@ -68,10 +91,21 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
 
 .bg-brand-dark {
     background-color: transparent;
+    transition: background-color 0.3s ease;
 }
 
 .bg-brand-dark-gray {
     background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+/* Light mode background adjustments */
+[data-theme="light"] .bg-brand-dark {
+    background-color: var(--light-bg);
+}
+
+[data-theme="light"] .bg-brand-dark-gray {
+    background-color: var(--light-bg-secondary);
 }
 
 .text-brand-light {
@@ -84,6 +118,60 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
 
 .border-brand-gold {
     border-color: var(--color-gold);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+    position: fixed;
+    bottom: 6rem;
+    right: 1.5rem;
+    z-index: 50;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 2px solid var(--color-gold);
+    background: linear-gradient(135deg, var(--color-dark) 0%, var(--color-dark-gray) 50%, var(--color-dark) 100%);
+    color: var(--color-gold);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(212, 175, 55, 0.4),
+        inset 0 1px 5px rgba(212, 175, 55, 0.15),
+        inset 0 -1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    border-color: var(--color-gold-hover);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.7),
+        0 0 0 2px rgba(240, 193, 75, 0.6),
+        inset 0 1px 8px rgba(240, 193, 75, 0.2),
+        inset 0 -1px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Light mode theme toggle button */
+[data-theme="light"] .theme-toggle {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(212, 175, 55, 0.4),
+        inset 0 1px 5px rgba(212, 175, 55, 0.15),
+        inset 0 -1px 5px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .theme-toggle:hover {
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.15),
+        0 0 0 2px rgba(240, 193, 75, 0.6),
+        inset 0 1px 8px rgba(240, 193, 75, 0.2),
+        inset 0 -1px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Slideshow Styles */
@@ -171,7 +259,7 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
     background-color: var(--color-gold-hover);
     border-color: var(--color-gold-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25), 0 8px 25px rgba(212, 175, 55, 0.15);
 }
 
 .btn-secondary {
@@ -184,7 +272,7 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
     background-color: var(--color-gold);
     color: var(--color-dark);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25), 0 8px 25px rgba(212, 175, 55, 0.15);
 }
 
 .section-title {
@@ -192,6 +280,7 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
     font-weight: 700;
     color: white;
     margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
 }
 
 .section-subtitle {
@@ -200,6 +289,849 @@ html[dir="rtl"] .btn, html[dir="rtl"] button {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    transition: color 0.3s ease;
+}
+
+/* Light mode text colors */
+[data-theme="light"] .section-title {
+    color: var(--light-text);
+}
+
+[data-theme="light"] .section-subtitle {
+    color: var(--light-text-secondary);
+}
+
+[data-theme="light"] .text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] .text-gray-300,
+[data-theme="light"] .text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Comprehensive light mode text color overrides */
+[data-theme="light"] span.text-white,
+[data-theme="light"] h1.text-white,
+[data-theme="light"] h2.text-white,
+[data-theme="light"] h3.text-white,
+[data-theme="light"] h4.text-white,
+[data-theme="light"] h5.text-white,
+[data-theme="light"] h6.text-white,
+[data-theme="light"] p.text-white,
+[data-theme="light"] div.text-white,
+[data-theme="light"] button.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] span.text-gray-300,
+[data-theme="light"] span.text-gray-400,
+[data-theme="light"] p.text-gray-300,
+[data-theme="light"] p.text-gray-400,
+[data-theme="light"] div.text-gray-300,
+[data-theme="light"] div.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode navigation and header */
+[data-theme="light"] .navbar-transparent {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] .text-brand-light {
+    color: var(--light-text) !important;
+}
+
+/* Light mode borders and dividers */
+[data-theme="light"] .border-gray-800 {
+    border-color: var(--light-border) !important;
+}
+
+[data-theme="light"] .border-gray-800\/50 {
+    border-color: rgba(229, 229, 229, 0.5) !important;
+}
+
+/* Light mode mobile menu */
+[data-theme="light"] #mobile-menu {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border-top: 1px solid var(--light-border);
+}
+
+/* Light mode footer */
+[data-theme="light"] footer {
+    background-color: var(--light-bg-secondary);
+    border-top: 1px solid var(--light-border);
+}
+
+/* Light mode buttons and links */
+[data-theme="light"] .nav-link {
+    color: var(--light-text);
+}
+
+[data-theme="light"] .nav-link:hover {
+    color: var(--color-gold);
+}
+
+[data-theme="light"] .mobile-nav-link {
+    color: var(--light-text);
+}
+
+[data-theme="light"] .mobile-nav-link:hover {
+    color: var(--color-gold);
+}
+
+/* Light mode cards and containers */
+[data-theme="light"] .vehicle-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--light-border);
+}
+
+/* Light mode gradients and overlays */
+[data-theme="light"] .bg-gradient-to-b {
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+
+/* Light mode hero section overlay - completely remove overlay */
+[data-theme="light"] #hero .bg-gradient-to-b {
+    background: transparent !important;
+    display: none !important;
+}
+
+/* Remove any light ray effects in light mode */
+[data-theme="light"] #hero::before,
+[data-theme="light"] #hero::after,
+[data-theme="light"] #hero .hero-dots::before,
+[data-theme="light"] #hero .hero-dots::after {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+/* Hide any animated light effects in hero section for light mode */
+[data-theme="light"] #hero .dot-grid-bg::before {
+    display: none !important;
+}
+
+/* Light mode slideshow dots */
+[data-theme="light"] #slideshow-dots button {
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid var(--color-gold);
+}
+
+[data-theme="light"] #slideshow-dots button.active {
+    background: var(--color-gold);
+}
+
+/* Light mode slide info text */
+[data-theme="light"] #slide-title,
+[data-theme="light"] #slide-description {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Light mode hero text - override to keep white */
+[data-theme="light"] .hero-section h1,
+[data-theme="light"] .hero-section p,
+[data-theme="light"] #hero h1,
+[data-theme="light"] #hero p,
+[data-theme="light"] #slide-title,
+[data-theme="light"] #slide-description {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Light mode contact section icons */
+[data-theme="light"] .bg-brand-gold {
+    background-color: var(--color-gold);
+}
+
+/* Light mode social media icons */
+[data-theme="light"] .bg-gradient-to-r {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    border: 1px solid var(--light-border);
+}
+
+[data-theme="light"] .bg-gradient-to-r:hover {
+    background: linear-gradient(to right, var(--color-gold), var(--color-gold-hover));
+    color: white;
+}
+
+/* Light mode language selector adjustments */
+[data-theme="light"] #floating-language-selector .language-selector-container button {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #ffffff 100%);
+    border: 2px solid var(--color-gold);
+    box-shadow:
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(212, 175, 55, 0.4),
+        inset 0 1px 5px rgba(212, 175, 55, 0.15),
+        inset 0 -1px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Light mode business card adjustments */
+[data-theme="light"] .business-card-container {
+    filter: brightness(1.1) contrast(1.05);
+}
+
+/* Ensure theme toggle is always visible */
+.theme-toggle {
+    opacity: 1 !important;
+    pointer-events: auto !important;
+    transform: translateY(0) !important;
+}
+
+/* Light mode improvements for better contrast */
+[data-theme="light"] .text-brand-gold {
+    color: #B8941F; /* Slightly darker gold for better contrast on light background */
+}
+
+[data-theme="light"] .border-brand-gold {
+    border-color: #B8941F;
+}
+
+/* Light mode navigation improvements */
+[data-theme="light"] .nav-link.active {
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+/* Light mode hero section text - keep white for contrast */
+[data-theme="light"] #hero .text-white,
+[data-theme="light"] #hero h1,
+[data-theme="light"] #hero h2,
+[data-theme="light"] #hero p {
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+[data-theme="light"] #hero .text-gray-300 {
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7) !important;
+}
+
+/* Light mode card improvements */
+[data-theme="light"] .bg-gray-800 {
+    background-color: #f1f5f9 !important;
+}
+
+[data-theme="light"] .hover\\:bg-gray-700:hover {
+    background-color: #e2e8f0 !important;
+}
+
+/* Enhanced form elements with premium styling */
+input,
+textarea,
+select {
+    background: rgba(26, 26, 27, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 8px;
+    padding: 12px 16px;
+    color: var(--color-light);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.2), 0 4px 12px rgba(0, 0, 0, 0.3);
+    background: rgba(26, 26, 27, 0.95);
+}
+
+/* Light mode form elements */
+[data-theme="light"] input,
+[data-theme="light"] textarea,
+[data-theme="light"] select {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-color: rgba(212, 175, 55, 0.3);
+    color: var(--light-text);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] input:focus,
+[data-theme="light"] textarea:focus,
+[data-theme="light"] select:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1), 0 4px 12px rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+/* Light mode step indicators for booking form */
+[data-theme="light"] .step-indicator.inactive {
+    background-color: #ffffff;
+    border: 1px solid var(--color-gold);
+    color: var(--color-gold);
+}
+
+/* Light mode vehicle cards */
+[data-theme="light"] .vehicle-card:hover {
+    background-color: rgba(248, 249, 250, 0.9);
+    border-color: var(--color-gold);
+}
+
+/* Light mode pricing cards */
+[data-theme="light"] .pricing-card {
+    background-color: #ffffff;
+    border: 1px solid var(--light-border);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Light mode testimonials */
+[data-theme="light"] .testimonial-card {
+    background-color: #ffffff;
+    border: 1px solid var(--light-border);
+}
+
+/* Light mode gallery items */
+[data-theme="light"] .gallery-item {
+    border: 1px solid var(--light-border);
+}
+
+/* Optimized Premium Card System */
+.premium-card {
+    background: rgba(26, 26, 27, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    will-change: transform;
+    contain: layout style paint;
+}
+
+.premium-card:hover {
+    transform: translateY(-4px) translateZ(0);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15), 0 8px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+/* Light mode premium cards */
+[data-theme="light"] .premium-card {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .premium-card:hover {
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15), 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Optimized Card Image System */
+.premium-card-image {
+    width: 100%;
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px 8px 0 0;
+}
+
+/* Service-specific image sizing */
+.premium-card .premium-card-image {
+    height: 320px;
+}
+
+/* Service sections - larger images for better visual impact */
+#services .premium-card .premium-card-image,
+.services-section .premium-card .premium-card-image {
+    height: 380px;
+}
+
+/* Responsive service image heights */
+@media (max-width: 1024px) {
+    .premium-card .premium-card-image {
+        height: 280px;
+    }
+
+    #services .premium-card .premium-card-image,
+    .services-section .premium-card .premium-card-image {
+        height: 320px;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-card .premium-card-image {
+        height: 240px;
+    }
+
+    #services .premium-card .premium-card-image,
+    .services-section .premium-card .premium-card-image {
+        height: 280px;
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-card .premium-card-image {
+        height: 200px;
+    }
+
+    #services .premium-card .premium-card-image,
+    .services-section .premium-card .premium-card-image {
+        height: 240px;
+    }
+}
+
+.premium-card-image img,
+.premium-card-image .main-car-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+.premium-card:hover .premium-card-image img,
+.premium-card:hover .premium-card-image .main-car-image {
+    transform: scale(1.08) translateZ(0);
+}
+
+/* Card content */
+.premium-card-content {
+    padding: 1.5rem;
+}
+
+.premium-card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    color: var(--color-light);
+    line-height: 1.3;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+    transition: color 0.3s ease;
+}
+
+[data-theme="light"] .premium-card-title {
+    color: var(--light-text);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.premium-card-text {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+    transition: color 0.3s ease;
+}
+
+[data-theme="light"] .premium-card-text {
+    color: var(--light-text-secondary);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+/* Light mode footer and contact section text */
+[data-theme="light"] footer .text-white,
+[data-theme="light"] footer span.text-white,
+[data-theme="light"] footer h3.text-white,
+[data-theme="light"] footer h4.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] footer .text-gray-400,
+[data-theme="light"] footer span.text-gray-400,
+[data-theme="light"] footer p.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode contact section */
+[data-theme="light"] #contact .text-white,
+[data-theme="light"] .contact-section .text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] #contact .text-gray-300,
+[data-theme="light"] #contact .text-gray-400,
+[data-theme="light"] .contact-section .text-gray-300,
+[data-theme="light"] .contact-section .text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode chatbot */
+[data-theme="light"] #chatbot-container .text-white,
+[data-theme="light"] .chatbot-card .text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] #chatbot-container .text-gray-400,
+[data-theme="light"] .chatbot-card .text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode input elements */
+[data-theme="light"] input.text-white,
+[data-theme="light"] textarea.text-white,
+[data-theme="light"] select.text-white {
+    color: var(--light-text) !important;
+}
+
+/* Light mode mobile menu */
+[data-theme="light"] #mobile-menu .text-white,
+[data-theme="light"] .mobile-nav-link.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] #mobile-menu .text-gray-400,
+[data-theme="light"] .mobile-nav-link.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode table elements */
+[data-theme="light"] table .text-white,
+[data-theme="light"] td.text-white,
+[data-theme="light"] th.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] table .text-gray-400,
+[data-theme="light"] td.text-gray-400,
+[data-theme="light"] th.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode button text */
+[data-theme="light"] button.text-white,
+[data-theme="light"] .btn.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] button.text-gray-400,
+[data-theme="light"] .btn.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode payment method badges - keep white text on colored backgrounds */
+[data-theme="light"] .bg-gradient-to-r .text-white {
+    color: white !important; /* Keep white text on colored payment badges */
+}
+
+/* Light mode form elements and booking page */
+[data-theme="light"] .booking-form-card .text-white,
+[data-theme="light"] .booking-form-card span.text-white,
+[data-theme="light"] .booking-form-card label.text-white {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] .booking-form-card .text-gray-400,
+[data-theme="light"] .booking-form-card span.text-gray-400 {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode form inputs - special handling */
+[data-theme="light"] input.text-white,
+[data-theme="light"] select.text-white,
+[data-theme="light"] textarea.text-white {
+    color: var(--light-text) !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-color: rgba(212, 175, 55, 0.4) !important;
+}
+
+[data-theme="light"] input::placeholder,
+[data-theme="light"] textarea::placeholder {
+    color: var(--light-text-secondary) !important;
+}
+
+/* Light mode step indicators */
+[data-theme="light"] .step-indicator.inactive {
+    background-color: #ffffff !important;
+    border: 1px solid var(--color-gold) !important;
+    color: var(--color-gold) !important;
+}
+
+[data-theme="light"] .step-indicator.active {
+    background-color: var(--color-gold) !important;
+    color: #000 !important;
+}
+
+/* Enhanced button effects similar to blog */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+/* Enhanced navigation links */
+.nav-link {
+    position: relative;
+    transition: all 0.15s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-gold);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Enhanced contact section cards */
+.contact-info-card {
+    background: rgba(26, 26, 27, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    padding: 2rem;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), 0 2px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15), 0 4px 15px rgba(0, 0, 0, 0.4);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="light"] .contact-info-card {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme="light"] .contact-info-card:hover {
+    box-shadow: 0 8px 30px rgba(212, 175, 55, 0.15), 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Subtle entrance animations for cards */
+@keyframes cardFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.premium-card {
+    animation: cardFadeIn 0.6s ease-out;
+}
+
+/* Staggered animation delays for multiple cards */
+.premium-card:nth-child(1) { animation-delay: 0.1s; }
+.premium-card:nth-child(2) { animation-delay: 0.2s; }
+.premium-card:nth-child(3) { animation-delay: 0.3s; }
+.premium-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Enhanced focus states for accessibility */
+.premium-card:focus-within {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 2px;
+}
+
+/* Improved button hover effects */
+.btn:hover {
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.25), 0 8px 25px rgba(212, 175, 55, 0.15);
+}
+
+/* Enhanced link cards */
+a.premium-card {
+    text-decoration: none;
+    color: inherit;
+}
+
+a.premium-card:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Optimized Fleet Card System */
+.fleet-card-detailed.premium-card {
+    border-radius: 16px;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.4s ease;
+    will-change: transform;
+    contain: layout style paint;
+}
+
+.fleet-card-detailed.premium-card:hover {
+    transform: translateY(-6px) translateZ(0);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2), 0 12px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(212, 175, 55, 0.4);
+}
+
+/* Light mode fleet cards */
+[data-theme="light"] .fleet-card-detailed.premium-card:hover {
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.2), 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Optimized Car Gallery System */
+.car-gallery.premium-card-image {
+    height: auto;
+    border-radius: 0;
+    overflow: visible;
+}
+
+.main-image-container {
+    height: 280px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+
+.fleet-card-detailed.premium-card:hover .main-car-image {
+    transform: scale(1.06) translateZ(0);
+}
+
+/* Optimized Gallery Navigation */
+.gallery-nav {
+    background: rgba(26, 26, 27, 0.9);
+    backdrop-filter: blur(8px);
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+[data-theme="light"] .gallery-nav {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-btn {
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    border-radius: 6px;
+    margin: 3px;
+    color: var(--color-light);
+}
+
+[data-theme="light"] .gallery-btn {
+    color: var(--light-text) !important;
+}
+
+.gallery-btn:hover {
+    background: rgba(212, 175, 55, 0.2);
+    transform: translateY(-1px) translateZ(0);
+}
+
+.gallery-btn.active {
+    background: var(--color-gold);
+    color: var(--color-dark);
+}
+
+/* Optimized Spec Grid */
+.spec-grid {
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.fleet-card-detailed.premium-card:hover .spec-grid {
+    background: rgba(212, 175, 55, 0.15);
+    border-color: rgba(212, 175, 55, 0.3);
+}
+
+[data-theme="light"] .spec-grid {
+    background: rgba(212, 175, 55, 0.08);
+}
+
+[data-theme="light"] .fleet-card-detailed.premium-card:hover .spec-grid {
+    background: rgba(212, 175, 55, 0.12);
+}
+
+/* Comprehensive Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .premium-card-image {
+        height: 180px;
+    }
+
+    .main-image-container {
+        height: 240px;
+    }
+}
+
+@media (max-width: 768px) {
+    .premium-card {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+
+    .premium-card-content {
+        padding: 1.2rem;
+    }
+
+    .premium-card-title {
+        font-size: 1.2rem;
+    }
+
+    .premium-card-image {
+        height: 160px;
+    }
+
+    .main-image-container {
+        height: 200px;
+    }
+
+    /* Reduced hover effects for mobile */
+    .premium-card:hover {
+        transform: translateY(-2px) translateZ(0);
+    }
+
+    .fleet-card-detailed.premium-card:hover {
+        transform: translateY(-3px) translateZ(0);
+    }
+
+    .premium-card:hover .premium-card-image img,
+    .premium-card:hover .premium-card-image .main-car-image,
+    .fleet-card-detailed.premium-card:hover .main-car-image,
+    .premium-card:hover .service-image {
+        transform: scale(1.04) translateZ(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .premium-card-content {
+        padding: 1rem;
+    }
+
+    .premium-card-title {
+        font-size: 1.1rem;
+    }
+
+    .premium-card-image {
+        height: 140px;
+    }
+
+    .main-image-container {
+        height: 180px;
+    }
+
+    .spec-grid {
+        padding: 0.8rem;
+        margin: 0.8rem 0;
+    }
+
+    .gallery-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
 }
 
 /* Dot Grid Background */
@@ -226,6 +1158,12 @@ section.dot-grid-bg {
     z-index: -1;
     pointer-events: none;
     animation: dotFloat 8s ease-in-out infinite;
+}
+
+/* Light mode dot grid */
+[data-theme="light"] .dot-grid-bg::before {
+    background-image: radial-gradient(circle, #D4AF37 1px, transparent 1px);
+    opacity: 0.1;
 }
 
 
@@ -276,17 +1214,18 @@ section.dot-grid-bg {
     100% { transform: translate(25px, 25px); }
 }
 
-/* Futuristic Vehicle Cards */
+/* Enhanced Vehicle Cards with Blog-style Effects */
 .vehicle-card {
     position: relative;
-    background: transparent;
+    background: rgba(26, 26, 27, 0.95);
+    backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 0;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    border: none;
-    backdrop-filter: none;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(212, 175, 55, 0.2);
     overflow: hidden;
     z-index: 2;
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1), 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 
@@ -298,8 +1237,10 @@ section.dot-grid-bg {
 }
 
 .vehicle-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.15), 0 8px 25px rgba(0, 0, 0, 0.4);
+    background: rgba(26, 26, 27, 0.98);
+    border-color: rgba(212, 175, 55, 0.3);
 }
 
 .vehicle-card .vehicle-image-container {
@@ -341,10 +1282,23 @@ section.dot-grid-bg {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
+[data-theme="light"] .vehicle-card .vehicle-title {
+    color: var(--light-text) !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
 .vehicle-card .vehicle-subtitle {
     color: #94a3b8;
     font-size: 0.95rem;
     margin-bottom: 1rem;
+}
+
+[data-theme="light"] .vehicle-card .vehicle-subtitle {
+    color: var(--light-text-secondary) !important;
+}
+
+[data-theme="light"] .text-slate-400 {
+    color: var(--light-text-secondary) !important;
 }
 
 .vehicle-card .vehicle-specs {
@@ -456,8 +1410,33 @@ section.dot-grid-bg {
     transition: transform 0.4s ease;
 }
 
-.vehicle-card:hover img {
-    transform: scale(1.05);
+/* Optimized Service Images */
+.service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.premium-card:hover .service-image {
+    transform: scale(1.08) translateZ(0);
+}
+
+/* Ensure service images fill their containers properly */
+#services .premium-card-image,
+.services-section .premium-card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+#services .service-image,
+.services-section .service-image {
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .animation-container {
@@ -512,12 +1491,7 @@ section.dot-grid-bg {
     height: 100%;
     object-fit: cover;
 }
-.service-image-container:hover img {
-    transform: scale(1.1);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-    z-index: 10;
-    position: relative;
-}
+/* Removed - using optimized service image system */
 
 /* V-Class image specific styling to match other images */
 .vclass-image {
@@ -639,35 +1613,56 @@ section.dot-grid-bg {
     border-color: rgba(212, 175, 55, 1);
 }
 
-/* Booking Form Cards */
-.booking-form-card {
-    background: transparent;
-    border: none;
-    transition: all 0.3s ease;
-    position: relative;
-    backdrop-filter: blur(10px);
-}
+/* Enhanced Booking Cards with Premium Effects */
+/* booking-form-card now uses premium-card classes for consistent styling */
 
-.booking-form-card:hover {
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.4), 0 0 60px rgba(212, 175, 55, 0.2);
-}
-
-/* Booking Vehicle Cards */
+/* Booking Vehicle Cards with Blog-style Effects */
 .booking-vehicle-card {
-    background: transparent;
-    border: none;
-    transition: all 0.3s ease;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
 }
 
-.booking-vehicle-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
-}
+/* booking-vehicle-card hover effects handled by premium-card system */
 
 .booking-vehicle-card.selected {
-    background-color: rgba(212, 175, 55, 0.1);
-    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3);
+    background: rgba(212, 175, 55, 0.15) !important;
+    border-color: rgba(212, 175, 55, 0.6) !important;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.3), 0 8px 25px rgba(0, 0, 0, 0.4) !important;
+    transform: translateY(-2px) translateZ(0) !important;
+}
+
+/* Booking Vehicle Images */
+.booking-vehicle-image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+    border-radius: 8px 8px 0 0;
+}
+
+.booking-vehicle-card:hover .booking-vehicle-image {
+    transform: scale(1.08) translateZ(0);
+}
+
+/* Responsive booking vehicle image heights */
+@media (max-width: 768px) {
+    .booking-vehicle-image {
+        height: 140px;
+    }
+
+    .booking-vehicle-card:hover .booking-vehicle-image {
+        transform: scale(1.04) translateZ(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .booking-vehicle-image {
+        height: 120px;
+    }
 }
 
 /* Booking Form Inputs */
@@ -897,12 +1892,7 @@ section.dot-grid-bg {
     transform-origin: center center;
 }
 
-.fleet-card-detailed img:hover {
-    transform: scale(1.6);
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
-    z-index: 20;
-    position: relative;
-}
+/* Removed - using optimized premium card system */
 
 .fleet-card-detailed .content {
     text-align: left;
@@ -941,6 +1931,19 @@ section.dot-grid-bg {
     font-size: 1rem;
     font-weight: 600;
     color: white;
+}
+
+[data-theme="light"] .fleet-card-detailed .spec-item .label {
+    color: var(--light-text-secondary) !important;
+}
+
+[data-theme="light"] .fleet-card-detailed .spec-item .value {
+    color: var(--light-text) !important;
+}
+
+[data-theme="light"] .fleet-card-detailed .spec-item {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Header Navigation Styles */
@@ -1067,16 +2070,7 @@ html[dir="rtl"] .fleet-card-detailed .spec-item {
     border-right: 3px solid rgba(255, 255, 255, 0.3) !important;
 }
 
-/* Fleet image hover effects for Arabic/RTL */
-[lang="ar"] .fleet-card-detailed img:hover,
-[dir="rtl"] .fleet-card-detailed img:hover,
-html[lang="ar"] .fleet-card-detailed img:hover,
-html[dir="rtl"] .fleet-card-detailed img:hover {
-    transform: scale(1.6) !important;
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4) !important;
-    z-index: 20 !important;
-    position: relative !important;
-}
+/* Removed - using optimized premium card system */
 
 [lang="ar"] .fleet-card-detailed img,
 [dir="rtl"] .fleet-card-detailed img,

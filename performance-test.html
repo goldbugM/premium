@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Test - Premium Chauffeur Cards</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="performance-test">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-white mb-4">Performance Optimized Cards</h1>
+                <p class="text-gray-400 text-lg mb-8">Testing enhanced image zoom effects and mobile responsiveness</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">🚀 Optimized for 60fps animations</span>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Optimization Features</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="zap" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Hardware Acceleration</h4>
+                        <p class="premium-card-text text-xs">translateZ(0) for GPU rendering</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="layers" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">CSS Containment</h4>
+                        <p class="premium-card-text text-xs">layout style paint optimization</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Mobile Optimized</h4>
+                        <p class="premium-card-text text-xs">Reduced effects for touch devices</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="image" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Image Zoom</h4>
+                        <p class="premium-card-text text-xs">Smooth 1.08x scale on hover</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Fleet Card Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Enhanced Fleet Card</h2>
+                
+                <article class="premium-card fleet-card-detailed max-w-4xl mx-auto">
+                    <div class="car-gallery premium-card-image" data-car="performance-test">
+                        <div class="main-image-container">
+                            <img src="assets/cars/mercedes-sclass/sclass_front.png" alt="Mercedes S-Class - Performance Test" class="main-car-image">
+                            <div class="image-overlay">
+                                <div class="view-indicator">
+                                    <span>Performance Test</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-nav p-4 flex justify-center space-x-2">
+                            <button class="gallery-btn active px-3 py-2 text-sm">
+                                <i data-lucide="car-front" class="w-4 h-4 inline mr-1"></i>
+                                <span>Front</span>
+                            </button>
+                            <button class="gallery-btn px-3 py-2 text-sm">
+                                <i data-lucide="car" class="w-4 h-4 inline mr-1"></i>
+                                <span>Side</span>
+                            </button>
+                            <button class="gallery-btn px-3 py-2 text-sm">
+                                <i data-lucide="car-front" class="w-4 h-4 inline mr-1 rotate-180"></i>
+                                <span>Rear</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="content premium-card-content">
+                        <h3 class="premium-card-title">Mercedes S-Class - Performance Test</h3>
+                        <div class="spec-grid grid grid-cols-3 gap-4 text-sm">
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">Animation</span>
+                                <span class="value block text-white font-semibold">60fps</span>
+                            </div>
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">GPU</span>
+                                <span class="value block text-white font-semibold">Accelerated</span>
+                            </div>
+                            <div class="spec-item text-center">
+                                <span class="label block text-gray-400">Mobile</span>
+                                <span class="value block text-white font-semibold">Optimized</span>
+                            </div>
+                        </div>
+                        <p class="premium-card-text mb-6">This card demonstrates the optimized image zoom effect (1.08x scale) with hardware acceleration and mobile-responsive scaling.</p>
+                        
+                        <div class="grid grid-cols-2 gap-4 text-sm">
+                            <div class="bg-green-900/20 p-3 rounded-lg border border-green-500/30">
+                                <h4 class="text-green-400 font-semibold mb-2">✅ Optimizations</h4>
+                                <ul class="space-y-1 text-green-300">
+                                    <li>• Hardware acceleration</li>
+                                    <li>• Reduced mobile effects</li>
+                                    <li>• CSS containment</li>
+                                    <li>• Optimized transitions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="bg-red-900/20 p-3 rounded-lg border border-red-500/30">
+                                <h4 class="text-red-400 font-semibold mb-2">❌ Removed</h4>
+                                <ul class="space-y-1 text-red-300">
+                                    <li>• Excessive 1.6x scaling</li>
+                                    <li>• Duplicate CSS rules</li>
+                                    <li>• Unnecessary transitions</li>
+                                    <li>• Heavy backdrop filters</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Mobile Responsiveness Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Mobile Responsiveness</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="premium-card-image mb-4">
+                            <div class="w-full h-32 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="monitor" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                        <h3 class="premium-card-title">Desktop</h3>
+                        <p class="premium-card-text text-sm">Full effects: 1.08x image scale, 6px card lift</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="premium-card-image mb-4">
+                            <div class="w-full h-32 bg-gradient-to-r from-green-600 to-teal-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="tablet" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                        <h3 class="premium-card-title">Tablet</h3>
+                        <p class="premium-card-text text-sm">Reduced effects: 1.04x image scale, 3px card lift</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="premium-card-image mb-4">
+                            <div class="w-full h-32 bg-gradient-to-r from-red-600 to-pink-600 rounded-lg flex items-center justify-center">
+                                <i data-lucide="smartphone" class="w-8 h-8 text-white"></i>
+                            </div>
+                        </div>
+                        <h3 class="premium-card-title">Mobile</h3>
+                        <p class="premium-card-text text-sm">Minimal effects: 1.04x image scale, 2px card lift</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Performance Comparison -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Before vs After</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-red-400">❌ Before Optimization</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">1.6x image scaling (too aggressive)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">Multiple duplicate CSS rules</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">No mobile optimization</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">Heavy backdrop filters</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-green-400">✅ After Optimization</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">1.08x scaling (perfect balance)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Clean, optimized CSS</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Responsive mobile scaling</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Hardware acceleration</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="text-center">
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title">Test Complete</h3>
+                    <p class="premium-card-text mb-6">The fleet cards now feature optimized performance with smooth 60fps animations</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="fleet.html" class="btn btn-primary text-sm">Fleet Page</a>
+                        <a href="fleet-demo.html" class="btn btn-secondary text-sm">Fleet Demo</a>
+                        <a href="all-enhancements-demo.html" class="btn btn-secondary text-sm">All Enhancements</a>
+                        <a href="index.html" class="btn btn-secondary text-sm">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -13,6 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
 
 </head>
 <body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="contact">
@@ -38,6 +40,9 @@
                     </a>
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -67,6 +72,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -120,28 +128,28 @@
 
                             <!-- Service Highlights -->
                             <div class="grid md:grid-cols-3 gap-8 mt-12">
-                                <div class="text-center">
+                                <div class="premium-card premium-card-content text-center">
                                     <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                         <i data-lucide="clock" class="w-8 h-8 text-brand-dark"></i>
                                     </div>
-                                    <h3 class="text-white font-semibold mb-2" data-translate="contact.availability24">24/7 Availability</h3>
-                                    <p class="text-gray-400 text-sm" data-translate="contact.availabilityDesc">Round-the-clock service for all your transportation needs</p>
+                                    <h3 class="premium-card-title font-semibold mb-2" data-translate="contact.availability24">24/7 Availability</h3>
+                                    <p class="premium-card-text text-sm" data-translate="contact.availabilityDesc">Round-the-clock service for all your transportation needs</p>
                                 </div>
 
-                                <div class="text-center">
+                                <div class="premium-card premium-card-content text-center">
                                     <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                         <i data-lucide="phone" class="w-8 h-8 text-brand-dark"></i>
                                     </div>
-                                    <h3 class="text-white font-semibold mb-2" data-translate="contact.instantResponse">Instant Response</h3>
-                                    <p class="text-gray-400 text-sm" data-translate="contact.responseDesc">Quick replies to all inquiries and booking requests</p>
+                                    <h3 class="premium-card-title font-semibold mb-2" data-translate="contact.instantResponse">Instant Response</h3>
+                                    <p class="premium-card-text text-sm" data-translate="contact.responseDesc">Quick replies to all inquiries and booking requests</p>
                                 </div>
 
-                                <div class="text-center">
+                                <div class="premium-card premium-card-content text-center">
                                     <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                                         <i data-lucide="shield-check" class="w-8 h-8 text-brand-dark"></i>
                                     </div>
-                                    <h3 class="text-white font-semibold mb-2" data-translate="contact.professionalService">Professional Service</h3>
-                                    <p class="text-gray-400 text-sm" data-translate="contact.professionalDesc">Experienced chauffeurs and premium vehicle fleet</p>
+                                    <h3 class="premium-card-title font-semibold mb-2" data-translate="contact.professionalService">Professional Service</h3>
+                                    <p class="premium-card-text text-sm" data-translate="contact.professionalDesc">Experienced chauffeurs and premium vehicle fleet</p>
                                 </div>
                             </div>
                         </div>
@@ -154,9 +162,9 @@
                 <div class="container mx-auto px-6">
                     <div class="grid lg:grid-cols-7 md:grid-cols-1 gap-12 max-w-7xl mx-auto">
                         <!-- Contact Form -->
-                        <div class="lg:col-span-3 contact-card rounded-lg p-6">
-                            <h3 class="text-xl font-bold text-white mb-4" data-translate="contact.formTitle">Send us a Message</h3>
-                            <p class="text-gray-300 text-sm mb-6 leading-relaxed" data-translate="contact.formDescription">
+                        <div class="lg:col-span-3 premium-card premium-card-content">
+                            <h3 class="premium-card-title text-xl font-bold mb-4" data-translate="contact.formTitle">Send us a Message</h3>
+                            <p class="premium-card-text text-sm mb-6 leading-relaxed" data-translate="contact.formDescription">
                                 Ready to experience premium chauffeur services? Share your transportation needs with us and we'll craft the perfect journey for you. Whether it's airport transfers, business meetings, special events, or city tours - our team is here to provide you with exceptional service tailored to your requirements.
                             </p>
 
@@ -246,8 +254,8 @@
                             </div>
 
                             <!-- Contact Information -->
-                            <div class="contact-card rounded-lg p-8">
-                                <h3 class="text-2xl font-bold text-white mb-6" data-translate="contact.contactInfoTitle">Contact Information</h3>
+                            <div class="premium-card premium-card-content">
+                                <h3 class="premium-card-title text-2xl font-bold mb-6" data-translate="contact.contactInfoTitle">Contact Information</h3>
                                 
                                 <div class="space-y-6">
                                     <div class="relative pl-20 rtl:pl-0 rtl:pr-20">
@@ -306,21 +314,21 @@
 
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             <!-- Tourism Button -->
-                            <a href="tourism.html" class="group bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 rounded-lg p-6 text-center transform hover:scale-105 hover:shadow-xl">
+                            <a href="tourism.html" class="premium-card premium-card-content group text-center transform hover:scale-105">
                                 <div class="flex items-center justify-center mb-3">
-                                    <i data-lucide="camera" class="w-8 h-8 mr-3"></i>
-                                    <span class="text-xl font-semibold" data-translate="contact.tourismButton">Tourism Packages</span>
+                                    <i data-lucide="camera" class="w-8 h-8 mr-3 text-brand-gold"></i>
+                                    <span class="premium-card-title text-xl font-semibold" data-translate="contact.tourismButton">Tourism Packages</span>
                                 </div>
-                                <p class="text-base opacity-80" data-translate="contact.tourismDesc">Luxury travel experiences</p>
+                                <p class="premium-card-text text-base" data-translate="contact.tourismDesc">Luxury travel experiences</p>
                             </a>
 
                             <!-- Destinations Button -->
-                            <a href="destinations.html" class="group bg-transparent border-2 border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 rounded-lg p-6 text-center transform hover:scale-105 hover:shadow-xl">
+                            <a href="destinations.html" class="premium-card premium-card-content group text-center transform hover:scale-105">
                                 <div class="flex items-center justify-center mb-3">
-                                    <i data-lucide="map-pin" class="w-8 h-8 mr-3"></i>
-                                    <span class="text-xl font-semibold" data-translate="contact.destinationsButton">Premium Destinations</span>
+                                    <i data-lucide="map-pin" class="w-8 h-8 mr-3 text-brand-gold"></i>
+                                    <span class="premium-card-title text-xl font-semibold" data-translate="contact.destinationsButton">Premium Destinations</span>
                                 </div>
-                                <p class="text-base opacity-80" data-translate="contact.destinationsDesc">Exclusive travel locations</p>
+                                <p class="premium-card-text text-base" data-translate="contact.destinationsDesc">Exclusive travel locations</p>
                             </a>
                         </div>
                     </div>
@@ -569,7 +577,7 @@
 
     <!-- Scripts -->
     <script src="translations-simple.js"></script>
-    <script src="header-loader.js"></script>
+
     <script src="mobile-menu.js"></script>
     <script src="social-bubble.js"></script>
     <script src="business-card.js"></script>

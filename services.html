@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Services | Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="social-bubble.css">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cairo:wght@300;400;500;600;700&family=Amiri:wght@400;700&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <script src="theme-toggle.js"></script>
 
 </head>
 <body class="bg-brand-dark text-brand-light font-sans antialiased dot-grid-bg" data-page="services">
@@ -37,6 +39,9 @@
                     </a>
                     <a href="fleet.html" class="nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -66,6 +71,9 @@
                     </a>
                     <a href="fleet.html" class="mobile-nav-link" data-page="fleet" data-translate="nav.fleet">
                         Fleet
+                    </a>
+                    <a href="blog/index.html" class="mobile-nav-link" data-page="blog" data-translate="nav.blog">
+                        Blog
                     </a>
                     <a href="destinations.html" class="mobile-nav-link" data-page="destinations" data-translate="nav.destinations">
                         Destinations
@@ -118,12 +126,12 @@
                 <section id="executive" class="py-20 md:py-28 bg-brand-dark-gray dot-grid-bg">
                     <div class="container mx-auto px-6">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
-                            <div>
+                            <div class="premium-card premium-card-content">
                                 <div class="flex items-center mb-6">
                                     <i data-lucide="briefcase" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.executiveTitle">Executive Chauffeur Service</h2>
+                                    <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.executiveTitle">Executive Chauffeur Service</h2>
                                 </div>
-                                <p class="text-gray-400 text-lg mb-8" data-translate="services.executiveDescription">Designed for the discerning business professional, our executive service guarantees punctuality, discretion, and a seamless travel experience. We provide a mobile office environment, allowing you to remain productive while on the move.</p>
+                                <p class="premium-card-text text-lg mb-8" data-translate="services.executiveDescription">Designed for the discerning business professional, our executive service guarantees punctuality, discretion, and a seamless travel experience. We provide a mobile office environment, allowing you to remain productive while on the move.</p>
 
                                 <div class="space-y-4">
                                     <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
@@ -140,8 +148,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative">
-                                <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Executive Chauffeur Service" class="w-full h-96 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Executive Chauffeur Service" class="service-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -151,12 +161,12 @@
                 <section id="vip" class="py-20 md:py-28 bg-brand-dark dot-grid-bg">
                     <div class="container mx-auto px-6">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
-                            <div class="lg:order-2">
+                            <div class="lg:order-2 premium-card premium-card-content">
                                 <div class="flex items-center mb-6">
                                     <i data-lucide="star" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.vipTitle">VIP Transportation</h2>
+                                    <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.vipTitle">VIP Transportation</h2>
                                 </div>
-                                <p class="text-gray-400 text-lg mb-8" data-translate="services.vipDescription">For those who require the utmost in luxury, security, and exclusivity. Our VIP service caters to celebrities, dignitaries, and high-profile clients for red carpet events, state visits, and private engagements. Your safety and privacy are our highest priorities.</p>
+                                <p class="premium-card-text text-lg mb-8" data-translate="services.vipDescription">For those who require the utmost in luxury, security, and exclusivity. Our VIP service caters to celebrities, dignitaries, and high-profile clients for red carpet events, state visits, and private engagements. Your safety and privacy are our highest priorities.</p>
 
                                 <div class="space-y-4">
                                     <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
@@ -173,8 +183,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="lg:order-1 relative">
-                                <img src="assets/cars/bmw-7series/bmw7.webp" alt="VIP Transportation" class="w-full h-96 object-cover rounded-lg">
+                            <div class="lg:order-1 premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/cars/bmw-7series/bmw7.webp" alt="VIP Transportation" class="service-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -184,12 +196,12 @@
                 <section id="airport" class="py-20 md:py-28 bg-brand-dark-gray dot-grid-bg">
                     <div class="container mx-auto px-6">
                         <div class="grid lg:grid-cols-2 gap-12 items-center">
-                            <div>
+                            <div class="premium-card premium-card-content">
                                 <div class="flex items-center mb-6">
                                     <i data-lucide="plane" class="w-12 h-12 text-brand-gold mr-4"></i>
-                                    <h2 class="text-3xl md:text-4xl font-bold text-white" data-translate="services.airportTitle">Airport Transfer Service</h2>
+                                    <h2 class="premium-card-title text-3xl md:text-4xl font-bold" data-translate="services.airportTitle">Airport Transfer Service</h2>
                                 </div>
-                                <p class="text-gray-400 text-lg mb-8" data-translate="services.airportDescription">Begin or end your journey in complete comfort and style. We offer premium, reliable transfers to and from all major airports. Our service includes flight tracking, meet-and-greet services, and luggage assistance for a stress-free experience.</p>
+                                <p class="premium-card-text text-lg mb-8" data-translate="services.airportDescription">Begin or end your journey in complete comfort and style. We offer premium, reliable transfers to and from all major airports. Our service includes flight tracking, meet-and-greet services, and luggage assistance for a stress-free experience.</p>
 
                                 <div class="space-y-4">
                                     <div class="relative pl-10 rtl:pl-0 rtl:pr-10">
@@ -206,8 +218,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="relative">
-                                <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Airport Transfer Service" class="w-full h-96 object-cover rounded-lg">
+                            <div class="premium-card">
+                                <div class="premium-card-image">
+                                    <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Airport Transfer Service" class="service-image">
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -551,7 +565,7 @@
 
     <script type="module" src="https://esm.run/framer-motion"></script>
     <script src="translations-simple.js"></script>
-    <script src="header-loader.js"></script>
+
     <script src="mobile-menu.js"></script>
     <script type="module" src="script.js"></script>
     <script src="chatbot.js"></script>

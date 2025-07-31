@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Cards Enhancement Demo - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="booking-demo">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-white mb-4">Booking Cards Enhancement Demo</h1>
+                <p class="text-gray-400 text-lg mb-8">Blog-style premium card effects applied to booking section</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">🚗 Enhanced vehicle selection cards with premium effects</span>
+                </div>
+            </div>
+
+            <!-- Enhancement Features -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Booking Card Enhancements</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="image" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Real Vehicle Images</h4>
+                        <p class="premium-card-text text-xs">Replaced emojis with actual car photos</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="zap" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Premium Effects</h4>
+                        <p class="premium-card-text text-xs">Blog-style hover animations</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="mouse-pointer-click" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Enhanced Selection</h4>
+                        <p class="premium-card-text text-xs">Golden glow for selected vehicles</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <i data-lucide="smartphone" class="w-8 h-8 text-brand-gold mx-auto mb-3"></i>
+                        <h4 class="premium-card-title text-sm font-semibold mb-2">Mobile Optimized</h4>
+                        <p class="premium-card-text text-xs">Responsive image scaling</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced Vehicle Selection Cards -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Enhanced Vehicle Selection</h2>
+                
+                <div class="premium-card premium-card-content mb-8">
+                    <h3 class="premium-card-title text-center mb-6">Select Your Premium Vehicle</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center" data-vehicle="BMW 7 Series">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/bmw-7series/bmw7.webp" alt="BMW 7 Series" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">BMW 7 Series</h5>
+                            <p class="premium-card-text text-sm">Luxury sedan for executive travel</p>
+                            <div class="mt-4 space-y-2 text-xs text-gray-400">
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="users" class="w-4 h-4 mr-2"></i>
+                                    <span>Up to 4 passengers</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="briefcase" class="w-4 h-4 mr-2"></i>
+                                    <span>Executive comfort</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center selected" data-vehicle="Mercedes S-Class">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Mercedes S-Class" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">Mercedes S-Class</h5>
+                            <p class="premium-card-text text-sm">Premium comfort and style</p>
+                            <div class="mt-4 space-y-2 text-xs text-gray-400">
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="users" class="w-4 h-4 mr-2"></i>
+                                    <span>Up to 4 passengers</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="star" class="w-4 h-4 mr-2"></i>
+                                    <span>Premium luxury</span>
+                                </div>
+                            </div>
+                            <div class="absolute top-2 right-2 bg-brand-gold text-brand-dark px-2 py-1 rounded-full text-xs font-bold">
+                                SELECTED
+                            </div>
+                        </div>
+                        
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center" data-vehicle="Mercedes V-Class">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Mercedes V-Class" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">Mercedes V-Class</h5>
+                            <p class="premium-card-text text-sm">Spacious van for groups</p>
+                            <div class="mt-4 space-y-2 text-xs text-gray-400">
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="users" class="w-4 h-4 mr-2"></i>
+                                    <span>Up to 7 passengers</span>
+                                </div>
+                                <div class="flex items-center justify-center">
+                                    <i data-lucide="luggage" class="w-4 h-4 mr-2"></i>
+                                    <span>Extra luggage space</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Before vs After Comparison -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Before vs After Enhancement</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-red-400">❌ Before Enhancement</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">Simple emoji icons (🚗🚙🚐)</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">Basic hover effects</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">Simple selection styling</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-red-500 rounded-full mr-3"></span>
+                                <span class="text-white">No visual vehicle representation</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-green-400">✅ After Enhancement</h3>
+                        <div class="space-y-3 text-left">
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Real vehicle photographs</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Premium card effects with image zoom</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Golden glow selection state</span>
+                            </div>
+                            <div class="flex items-center">
+                                <span class="w-3 h-3 bg-green-500 rounded-full mr-3"></span>
+                                <span class="text-white">Professional visual presentation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interactive Demo -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Interactive Selection Demo</h2>
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title text-center mb-6">Click any vehicle to see selection effect</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="interactive-demo">
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center demo-card" data-vehicle="BMW 7 Series">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/bmw-7series/bmw7.webp" alt="BMW 7 Series" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">BMW 7 Series</h5>
+                            <p class="premium-card-text text-sm">Click to select</p>
+                        </div>
+                        
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center demo-card" data-vehicle="Mercedes S-Class">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/mercedes-sclass/sclass.webp" alt="Mercedes S-Class" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">Mercedes S-Class</h5>
+                            <p class="premium-card-text text-sm">Click to select</p>
+                        </div>
+                        
+                        <div class="premium-card premium-card-content booking-vehicle-card text-center demo-card" data-vehicle="Mercedes V-Class">
+                            <div class="premium-card-image mb-4">
+                                <img src="assets/cars/mercedes-vclass/vclass.webp" alt="Mercedes V-Class" class="booking-vehicle-image">
+                            </div>
+                            <h5 class="premium-card-title font-semibold mb-2">Mercedes V-Class</h5>
+                            <p class="premium-card-text text-sm">Click to select</p>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6">
+                        <p class="text-gray-400 text-sm">Selected vehicle: <span id="selected-vehicle" class="text-brand-gold font-semibold">None</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical Improvements -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Technical Improvements</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="premium-card premium-card-content">
+                        <h4 class="premium-card-title text-green-400 mb-3">🖼️ Image Integration</h4>
+                        <ul class="space-y-2 text-sm premium-card-text">
+                            <li>• Real vehicle photographs</li>
+                            <li>• 160px height on desktop</li>
+                            <li>• Responsive scaling</li>
+                            <li>• Perfect aspect ratios</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h4 class="premium-card-title text-blue-400 mb-3">⚡ Performance</h4>
+                        <ul class="space-y-2 text-sm premium-card-text">
+                            <li>• Hardware acceleration</li>
+                            <li>• 1.08x image scaling</li>
+                            <li>• Smooth transitions</li>
+                            <li>• 60fps animations</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h4 class="premium-card-title text-purple-400 mb-3">🎨 Visual Effects</h4>
+                        <ul class="space-y-2 text-sm premium-card-text">
+                            <li>• Premium card styling</li>
+                            <li>• Golden selection glow</li>
+                            <li>• Backdrop blur effects</li>
+                            <li>• Enhanced typography</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="text-center">
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title">Booking Cards Enhancement Complete</h3>
+                    <p class="premium-card-text mb-6">Vehicle selection cards now feature premium blog-style effects with real vehicle images</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="booking-form.html" class="btn btn-primary text-sm">Booking Form</a>
+                        <a href="services-demo.html" class="btn btn-secondary text-sm">Services Demo</a>
+                        <a href="fleet-demo.html" class="btn btn-secondary text-sm">Fleet Demo</a>
+                        <a href="all-enhancements-demo.html" class="btn btn-secondary text-sm">All Enhancements</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Interactive demo functionality
+        document.querySelectorAll('.demo-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // Remove selection from all demo cards
+                document.querySelectorAll('.demo-card').forEach(c => c.classList.remove('selected'));
+                
+                // Add selection to clicked card
+                this.classList.add('selected');
+                
+                // Update selected vehicle display
+                const vehicleName = this.getAttribute('data-vehicle');
+                document.getElementById('selected-vehicle').textContent = vehicleName;
+            });
+        });
+    </script>
+</body>
+</html>

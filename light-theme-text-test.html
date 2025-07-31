@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Theme Text Test - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="light-theme-test">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-white mb-4">Light Theme Text Color Test</h1>
+                <p class="text-gray-400 text-lg mb-8">Testing white text elements that should become black in light mode</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">🌞 Switch to light mode to test text colors</span>
+                </div>
+            </div>
+
+            <!-- Text Color Examples -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Text Color Examples</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-white mb-4">White Text Elements</h3>
+                        <div class="space-y-2">
+                            <p class="text-white">Regular white text</p>
+                            <span class="text-white">White span element</span>
+                            <h4 class="text-white text-lg">White heading</h4>
+                            <div class="text-white">White div text</div>
+                        </div>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-white mb-4">Gray Text Elements</h3>
+                        <div class="space-y-2">
+                            <p class="text-gray-300">Gray-300 text</p>
+                            <p class="text-gray-400">Gray-400 text</p>
+                            <span class="text-gray-300">Gray-300 span</span>
+                            <span class="text-gray-400">Gray-400 span</span>
+                        </div>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-white mb-4">Mixed Elements</h3>
+                        <div class="space-y-2">
+                            <div class="flex items-center">
+                                <i data-lucide="check-circle" class="w-5 h-5 text-brand-gold mr-2"></i>
+                                <span class="text-white">Feature with white text</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i data-lucide="info" class="w-5 h-5 text-brand-gold mr-2"></i>
+                                <span class="text-gray-400">Info with gray text</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Style Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Footer Style Elements</h2>
+                <div class="premium-card premium-card-content">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-white text-lg font-bold mb-4">Contact Information</h3>
+                            <div class="space-y-3">
+                                <div class="flex items-center text-gray-400 text-sm">
+                                    <i data-lucide="phone" class="w-4 h-4 mr-3 text-brand-gold"></i>
+                                    <div>
+                                        <span class="text-white font-medium">Phone:</span>
+                                        <span class="ml-2">+49 176 31454340</span>
+                                    </div>
+                                </div>
+                                <div class="flex items-center text-gray-400 text-sm">
+                                    <i data-lucide="mail" class="w-4 h-4 mr-3 text-brand-gold"></i>
+                                    <div>
+                                        <span class="text-white font-medium">Email:</span>
+                                        <span class="ml-2">info@premium-chauffeur.com</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3 class="text-white text-lg font-bold mb-4">Payment Methods</h3>
+                            <div class="flex items-center gap-4">
+                                <span class="text-white text-sm font-medium mr-2">We Accept:</span>
+                                <div class="flex gap-2">
+                                    <div class="w-12 h-7 bg-gradient-to-r from-blue-600 to-blue-700 rounded-md flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">VISA</span>
+                                    </div>
+                                    <div class="w-12 h-7 bg-gradient-to-r from-red-600 to-red-700 rounded-md flex items-center justify-center">
+                                        <span class="text-white text-xs font-bold">MC</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Form Elements Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Form Elements Test</h2>
+                <div class="premium-card premium-card-content booking-form-card">
+                    <h3 class="text-white text-xl font-bold mb-6">Sample Booking Form</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-brand-gold text-base font-medium mb-2">Name</label>
+                            <input type="text" class="bg-black py-3 px-4 text-white rounded-lg border border-brand-gold w-full" placeholder="Enter your name">
+                        </div>
+                        <div>
+                            <label class="block text-brand-gold text-base font-medium mb-2">Email</label>
+                            <input type="email" class="bg-black py-3 px-4 text-white rounded-lg border border-brand-gold w-full" placeholder="Enter your email">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6">
+                        <label class="block text-brand-gold text-base font-medium mb-4">Additional Services</label>
+                        <div class="grid grid-cols-2 gap-4">
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="w-5 h-5 text-brand-gold bg-black border-brand-gold rounded">
+                                <span class="text-white">WiFi Access</span>
+                            </label>
+                            <label class="flex items-center space-x-3">
+                                <input type="checkbox" class="w-5 h-5 text-brand-gold bg-black border-brand-gold rounded">
+                                <span class="text-white">Child Seat</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Table Elements Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Table Elements Test</h2>
+                <div class="premium-card premium-card-content">
+                    <table class="w-full">
+                        <thead>
+                            <tr class="border-b border-gray-600">
+                                <th class="text-left py-3 text-white font-semibold">Feature</th>
+                                <th class="text-center py-3 text-white font-semibold">Available</th>
+                                <th class="text-center py-3 text-white font-semibold">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-3 text-white font-medium">Professional Chauffeur</td>
+                                <td class="py-3 text-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mx-auto"></i></td>
+                                <td class="py-3 text-center text-gray-400">Standard</td>
+                            </tr>
+                            <tr class="border-b border-gray-700">
+                                <td class="py-3 text-white font-medium">Luxury Vehicle</td>
+                                <td class="py-3 text-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mx-auto"></i></td>
+                                <td class="py-3 text-center text-gray-400">Premium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Chatbot Style Test -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Chatbot Style Test</h2>
+                <div class="premium-card premium-card-content">
+                    <div class="chatbot-card bg-brand-dark-gray border border-gray-600 rounded-lg p-4">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-white flex items-center">
+                                <i data-lucide="bot" class="w-5 h-5 mr-2 text-brand-gold"></i>
+                                Premium Chauffeur Assistant
+                            </h3>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-gray-400 hover:text-white text-xs px-1">S</button>
+                                <button class="text-gray-400 hover:text-white text-xs px-1">M</button>
+                                <button class="text-gray-400 hover:text-white text-xs px-1">L</button>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <input type="text" class="flex-grow text-white bg-gray-800 rounded-md py-2 px-3" placeholder="Ask about our services...">
+                            <button class="bg-brand-gold text-brand-dark p-2 rounded-md">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Test Results -->
+            <section class="mb-16">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">Expected Results in Light Mode</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-green-400">✅ Should Turn Black/Dark</h3>
+                        <ul class="space-y-2 text-sm premium-card-text">
+                            <li>• All text-white elements</li>
+                            <li>• Headings and titles</li>
+                            <li>• Footer contact information</li>
+                            <li>• Table headers and content</li>
+                            <li>• Form labels and text</li>
+                            <li>• Chatbot text elements</li>
+                        </ul>
+                    </div>
+
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-blue-400">📝 Should Turn Gray</h3>
+                        <ul class="space-y-2 text-sm premium-card-text">
+                            <li>• All text-gray-300 elements</li>
+                            <li>• All text-gray-400 elements</li>
+                            <li>• Secondary text content</li>
+                            <li>• Placeholder text</li>
+                            <li>• Descriptive text</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation -->
+            <div class="text-center">
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title text-white">Light Theme Text Test Complete</h3>
+                    <p class="premium-card-text text-gray-400 mb-6">Switch to light mode using the theme toggle to verify all text colors</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="index.html" class="btn btn-primary text-sm">Main Page</a>
+                        <a href="services.html" class="btn btn-secondary text-sm">Services</a>
+                        <a href="booking-form.html" class="btn btn-secondary text-sm">Booking</a>
+                        <a href="all-enhancements-demo.html" class="btn btn-secondary text-sm">All Tests</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

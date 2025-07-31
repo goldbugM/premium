@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOUC Fix Test - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="fouc-test">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-white mb-4">FOUC Fix Test</h1>
+                <p class="text-gray-400 text-lg mb-8">Test for Flash of Unstyled Content (FOUC) elimination</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">Current Theme: <span id="current-theme">Dark</span></span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-brand-dark-gray p-6 rounded-lg dot-grid-bg">
+                    <h3 class="section-title text-xl mb-4">Test Instructions</h3>
+                    <div class="space-y-3 text-gray-300">
+                        <p>1. Switch to light mode using the theme toggle</p>
+                        <p>2. Navigate between pages using the links below</p>
+                        <p>3. Observe that there's no black flash when loading pages</p>
+                        <p>4. The light theme should appear immediately</p>
+                    </div>
+                </div>
+
+                <div class="bg-brand-dark-gray p-6 rounded-lg">
+                    <h3 class="section-title text-xl mb-4">Navigation Links</h3>
+                    <div class="space-y-3">
+                        <a href="index.html" class="block text-brand-gold hover:text-brand-light transition-colors">🏠 Home Page</a>
+                        <a href="services.html" class="block text-brand-gold hover:text-brand-light transition-colors">🚗 Services</a>
+                        <a href="fleet.html" class="block text-brand-gold hover:text-brand-light transition-colors">🚙 Fleet</a>
+                        <a href="destinations.html" class="block text-brand-gold hover:text-brand-light transition-colors">📍 Destinations</a>
+                        <a href="contact.html" class="block text-brand-gold hover:text-brand-light transition-colors">📞 Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <div class="bg-brand-dark-gray p-8 rounded-lg dot-grid-bg">
+                    <h3 class="section-title text-2xl mb-6">Fix Details</h3>
+                    <div class="text-left max-w-2xl mx-auto space-y-4 text-gray-300">
+                        <p><strong class="text-white">Problem:</strong> When navigating between pages in light mode, the dark background would flash briefly before switching to light mode.</p>
+                        <p><strong class="text-white">Solution:</strong> Added <code class="bg-gray-800 px-2 py-1 rounded">theme-init.js</code> that runs immediately when the page loads, before any content is rendered.</p>
+                        <p><strong class="text-white">Result:</strong> Instant theme application with no FOUC (Flash of Unstyled Content).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateThemeDisplay() {
+            const themeDisplay = document.getElementById('current-theme');
+            const currentTheme = window.themeManager ? window.themeManager.getCurrentTheme() : 'dark';
+            themeDisplay.textContent = currentTheme === 'light' ? 'Light' : 'Dark';
+        }
+
+        // Update display when theme changes
+        window.addEventListener('themeChanged', updateThemeDisplay);
+        
+        // Update display on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(updateThemeDisplay, 100);
+        });
+    </script>
+</body>
+</html>

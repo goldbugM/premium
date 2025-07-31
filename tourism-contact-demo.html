@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism & Contact Card Effects Demo - Premium Chauffeur</title>
+    <script src="theme-init.js"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="theme-toggle.js"></script>
+</head>
+<body class="bg-brand-dark text-brand-light font-sans antialiased" data-page="tourism-contact-demo">
+    <div class="min-h-screen bg-brand-dark">
+        <div class="container mx-auto px-6 py-20">
+            <div class="text-center mb-16">
+                <h1 class="text-4xl font-bold text-white mb-4">Tourism & Contact Card Effects</h1>
+                <p class="text-gray-400 text-lg mb-8">Demonstration of blog-style card effects applied to Tourism and Contact pages</p>
+                <div class="inline-block bg-brand-gold text-brand-dark px-6 py-3 rounded-lg mb-8">
+                    <span class="font-semibold">Hover over cards to see the premium effects!</span>
+                </div>
+            </div>
+
+            <!-- Tourism Cards Section -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Tourism Package Cards</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <!-- Europa Park -->
+                    <div class="premium-card">
+                        <div class="premium-card-image">
+                            <img src="assets/slideshow/europa-park.webp" alt="Europa Park">
+                        </div>
+                        <div class="premium-card-content">
+                            <h3 class="premium-card-title">Europa Park</h3>
+                            <p class="premium-card-text mb-6">Germany's largest theme park with thrilling rides and European-themed areas.</p>
+                            <a href="booking-form.html" class="btn btn-primary">Book Visit</a>
+                        </div>
+                    </div>
+
+                    <!-- LEGOLAND -->
+                    <div class="premium-card">
+                        <div class="premium-card-image">
+                            <img src="assets/slideshow/legoland.webp" alt="LEGOLAND">
+                        </div>
+                        <div class="premium-card-content">
+                            <h3 class="premium-card-title">LEGOLAND</h3>
+                            <p class="premium-card-text mb-6">Perfect family destination with LEGO-themed attractions and interactive experiences.</p>
+                            <a href="booking-form.html" class="btn btn-primary">Book Visit</a>
+                        </div>
+                    </div>
+
+                    <!-- Outletcity Metzingen -->
+                    <div class="premium-card">
+                        <div class="premium-card-image">
+                            <img src="assets/slideshow/outletcity-metzingen.webp" alt="Outletcity Metzingen">
+                        </div>
+                        <div class="premium-card-content">
+                            <h3 class="premium-card-title">Outletcity Metzingen</h3>
+                            <p class="premium-card-text mb-6">Premium outlet with luxury brands like Hugo Boss, Escada, and more.</p>
+                            <a href="booking-form.html" class="btn btn-primary">Book Shopping Tour</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Service Highlights -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Contact Service Highlights</h2>
+                <div class="grid md:grid-cols-3 gap-8 mb-12">
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="clock" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">24/7 Availability</h3>
+                        <p class="premium-card-text text-sm">Round-the-clock service for all your transportation needs</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="phone" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">Instant Response</h3>
+                        <p class="premium-card-text text-sm">Quick replies to all inquiries and booking requests</p>
+                    </div>
+
+                    <div class="premium-card premium-card-content text-center">
+                        <div class="bg-brand-gold p-4 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-brand-dark"></i>
+                        </div>
+                        <h3 class="premium-card-title font-semibold mb-2">Professional Service</h3>
+                        <p class="premium-card-text text-sm">Experienced chauffeurs and premium vehicle fleet</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Enhanced Form Demo -->
+            <section class="mb-20">
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Enhanced Form Elements</h2>
+                <div class="max-w-2xl mx-auto">
+                    <div class="premium-card premium-card-content">
+                        <h3 class="premium-card-title text-xl font-bold mb-4">Contact Form Demo</h3>
+                        <p class="premium-card-text text-sm mb-6">Experience our enhanced form styling with backdrop blur and golden accents</p>
+                        
+                        <form class="space-y-4">
+                            <div>
+                                <label class="block text-white font-medium mb-2">Name</label>
+                                <input type="text" placeholder="Your full name" class="w-full">
+                            </div>
+                            <div>
+                                <label class="block text-white font-medium mb-2">Email</label>
+                                <input type="email" placeholder="your.email@example.com" class="w-full">
+                            </div>
+                            <div>
+                                <label class="block text-white font-medium mb-2">Service Type</label>
+                                <select class="w-full">
+                                    <option>Airport Transfer</option>
+                                    <option>Executive Service</option>
+                                    <option>VIP Transportation</option>
+                                    <option>Tourism Package</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-white font-medium mb-2">Message</label>
+                                <textarea rows="4" placeholder="Tell us about your transportation needs..." class="w-full"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-full">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Links -->
+            <div class="text-center">
+                <div class="premium-card premium-card-content">
+                    <h3 class="premium-card-title">Explore Enhanced Pages</h3>
+                    <p class="premium-card-text mb-6">Visit the updated pages to see all card effects in action</p>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <a href="Tourism_Packages.html" class="btn btn-secondary text-sm">Tourism</a>
+                        <a href="contact.html" class="btn btn-secondary text-sm">Contact</a>
+                        <a href="index.html" class="btn btn-secondary text-sm">Home</a>
+                        <a href="card-effects-demo.html" class="btn btn-secondary text-sm">All Effects</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
