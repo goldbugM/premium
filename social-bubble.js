@@ -108,7 +108,11 @@ class EnhancedChatbot {
         this.currentForm = null; // 'contact' or 'booking'
         this.formStep = 0;
         this.formData = {};
-        this.formspreeEndpoint = 'https://formspree.io/f/myzerqwz';
+        this.formspreeEndpoint = 'https://formspree.io/f/myzerjwz';
+        this.fallbackEndpoints = [
+            'https://formspree.io/f/myzerqwz',
+            'https://formspree.io/f/myzerjwz'
+        ];
         this.init();
     }
 
@@ -424,30 +428,105 @@ class EnhancedChatbot {
 
             // Add form type
             formData.append('form_type', this.currentForm);
+            formData.append('source', 'chatbot');
+            formData.append('timestamp', new Date().toISOString());
 
             // Add all collected data
             Object.keys(this.formData).forEach(key => {
                 formData.append(key, this.formData[key]);
             });
 
-            const response = await fetch(this.formspreeEndpoint, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            });
+            // Try primary submission with fallbacks
+            let success = false;
+            let lastError = null;
 
-            if (response.ok) {
-                this.addMessage("✅ Perfect! Your request has been submitted successfully. Our team will contact you shortly.", 'bot');
-            } else {
-                throw new Error('Submission failed');
+            for (const endpoint of this.fallbackEndpoints) {
+                try {
+                    console.log('Trying endpoint:', endpoint);
+                    console.log('Form data:', Object.fromEntries(formData.entries()));
+
+                    const response = await fetch(endpoint, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        const result = await response.json();
+                        console.log('Submission successful:', result);
+                        this.addMessage("✅ Perfect! Your request has been submitted successfully. Our team will contact you shortly.", 'bot');
+
+                        // Also offer WhatsApp as additional confirmation
+                        this.offerWhatsAppBackup();
+                        success = true;
+                        break;
+                    } else {
+                        const errorText = await response.text();
+                        console.error(`Endpoint ${endpoint} failed:`, response.status, errorText);
+                        lastError = new Error(`Submission failed: ${response.status} - ${errorText}`);
+                    }
+                } catch (error) {
+                    console.error(`Error with endpoint ${endpoint}:`, error);
+                    lastError = error;
+                }
+            }
+
+            if (!success) {
+                throw lastError || new Error('All submission endpoints failed');
             }
         } catch (error) {
-            this.addMessage("❌ There was an issue submitting your request. Please try contacting us directly at +49 176 31454340 or info@premium-chauffeur.com", 'bot');
+            console.error('Chatbot submission error:', error);
+
+            // Offer alternative contact methods
+            this.addMessage("❌ There was an issue submitting your request through our form system.", 'bot');
+
+            setTimeout(() => {
+                this.addMessage("Let me help you with alternative ways to reach us:", 'bot');
+                setTimeout(() => {
+                    this.offerAlternativeContact();
+                }, 1000);
+            }, 500);
         }
 
         this.resetForm();
+    }
+
+    offerWhatsAppBackup() {
+        const whatsappMessage = this.createWhatsAppMessage();
+        const whatsappUrl = `https://wa.me/4917631454340?text=${encodeURIComponent(whatsappMessage)}`;
+
+        setTimeout(() => {
+            this.addMessage(`📱 **Quick WhatsApp Option**: [Send via WhatsApp](${whatsappUrl}) for instant confirmation!`, 'bot');
+        }, 2000);
+    }
+
+    offerAlternativeContact() {
+        const whatsappMessage = this.createWhatsAppMessage();
+        const whatsappUrl = `https://wa.me/4917631454340?text=${encodeURIComponent(whatsappMessage)}`;
+
+        this.addMessage(`**Alternative Contact Methods:**
+
+📱 **WhatsApp**: [Send your request instantly](${whatsappUrl})
+📞 **Phone**: +49 176 31454340
+📧 **Email**: info@premium-chauffeur.com
+
+I've prepared your request details for WhatsApp - just click the link above!`, 'bot');
+    }
+
+    createWhatsAppMessage() {
+        const formType = this.currentForm === 'booking' ? 'BOOKING REQUEST' : 'CONTACT REQUEST';
+        let message = `*PREMIUM CHAUFFEUR - ${formType}*\n\n`;
+
+        Object.keys(this.formData).forEach(key => {
+            const value = this.formData[key];
+            const label = key.charAt(0).toUpperCase() + key.slice(1).replace(/([A-Z])/g, ' $1');
+            message += `• *${label}:* ${value}\n`;
+        });
+
+        message += `\n_Sent from Premium Chauffeur Chatbot_`;
+        return message;
     }
 
     resetForm() {
