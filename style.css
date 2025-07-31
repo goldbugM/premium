@@ -1410,6 +1410,68 @@ section.dot-grid-bg {
     transition: transform 0.4s ease;
 }
 
+/* Universal Image Hover Scale Effect */
+img,
+.service-image,
+.premium-card img,
+.vehicle-card img,
+.booking-vehicle-image,
+.slideshow img,
+#slideshow-container img,
+.hero-image,
+.card img,
+.gallery img {
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+img:hover,
+.service-image:hover,
+.premium-card:hover img,
+.vehicle-card:hover img,
+.booking-vehicle-image:hover,
+.slideshow:hover img,
+#slideshow-container:hover img,
+.hero-image:hover,
+.card:hover img,
+.gallery:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Prevent scale on small UI images */
+.logo img:hover,
+.icon img:hover,
+.lucide:hover,
+[data-lucide]:hover,
+.nav img:hover,
+.header img:hover {
+    transform: none !important;
+    filter: none !important;
+}
+
+/* Blog and Guide Image Hover Effects */
+.blog-card img:hover,
+.guide-card img:hover,
+.destination-image:hover,
+.blog-hero-image:hover {
+    transform: scale(1.08);
+    filter: brightness(1.15) contrast(1.05);
+}
+
+/* Service Card Image Hover Effects */
+.service-card:hover .service-image {
+    transform: scale(1.06);
+    filter: brightness(1.1);
+}
+
+/* Fleet Gallery Image Hover Effects */
+.fleet-card:hover img,
+.gallery-item:hover img {
+    transform: scale(1.07);
+    filter: brightness(1.12) saturate(1.1);
+}
+
 /* Optimized Service Images */
 .service-image {
     width: 100%;
