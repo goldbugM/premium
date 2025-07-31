@@ -1410,7 +1410,7 @@ section.dot-grid-bg {
     transition: transform 0.4s ease;
 }
 
-/* Universal Image Hover Scale Effect */
+/* Universal Image Hover Scale Effect - Pop Out of Container */
 img,
 .service-image,
 .premium-card img,
@@ -1421,8 +1421,9 @@ img,
 .hero-image,
 .card img,
 .gallery img {
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, z-index 0.3s ease-in-out;
     cursor: pointer;
+    position: relative;
 }
 
 img:hover,
@@ -1435,8 +1436,64 @@ img:hover,
 .hero-image:hover,
 .card:hover img,
 .gallery:hover img {
-    transform: scale(1.05);
+    transform: scale(1.15);
     filter: brightness(1.1);
+    z-index: 999;
+    position: relative;
+}
+
+/* Make containers allow overflow for pop-out effect */
+.premium-card,
+.vehicle-card,
+.service-card,
+.card,
+.gallery,
+.fleet-card,
+.blog-card,
+.guide-card {
+    overflow: visible !important;
+    position: relative;
+}
+
+/* Image containers need to allow overflow */
+.vehicle-image-container,
+.service-image-container,
+.premium-card-image,
+.card-image,
+.gallery-item {
+    overflow: visible !important;
+    position: relative;
+}
+
+/* Specific container overrides for pop-out effect */
+.vehicle-card .vehicle-image-container {
+    overflow: visible !important;
+    border-radius: 16px;
+}
+
+.service-card {
+    overflow: visible !important;
+}
+
+.blog-card,
+.guide-card {
+    overflow: visible !important;
+}
+
+/* Grid containers need to allow overflow */
+.grid,
+.vehicle-grid,
+.service-grid,
+.blog-grid,
+.fleet-grid {
+    overflow: visible !important;
+}
+
+/* Section containers */
+.services-section,
+.fleet-section,
+.blog-section {
+    overflow: visible !important;
 }
 
 /* Prevent scale on small UI images */
@@ -1450,26 +1507,35 @@ img:hover,
     filter: none !important;
 }
 
-/* Blog and Guide Image Hover Effects */
+/* Blog and Guide Image Hover Effects - Pop Out */
 .blog-card img:hover,
 .guide-card img:hover,
 .destination-image:hover,
 .blog-hero-image:hover {
-    transform: scale(1.08);
+    transform: scale(1.2);
     filter: brightness(1.15) contrast(1.05);
+    z-index: 999;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-/* Service Card Image Hover Effects */
+/* Service Card Image Hover Effects - Pop Out */
 .service-card:hover .service-image {
-    transform: scale(1.06);
+    transform: scale(1.18);
     filter: brightness(1.1);
+    z-index: 999;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
-/* Fleet Gallery Image Hover Effects */
+/* Fleet Gallery Image Hover Effects - Pop Out */
 .fleet-card:hover img,
 .gallery-item:hover img {
-    transform: scale(1.07);
+    transform: scale(1.16);
     filter: brightness(1.12) saturate(1.1);
+    z-index: 999;
+    position: relative;
+    box-shadow: 0 18px 38px rgba(0, 0, 0, 0.28);
 }
 
 /* Optimized Service Images */
