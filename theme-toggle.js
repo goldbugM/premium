@@ -41,25 +41,25 @@ class ThemeManager {
             document.getElementById('theme-toggle-mobile')
         ].filter(btn => btn !== null);
 
-        // If no buttons exist, create a fallback one
+        // If no buttons exist, don't create a fallback - buttons should be in HTML
         if (this.themeToggleButtons.length === 0) {
-            const fallbackButton = document.createElement('button');
-            fallbackButton.id = 'theme-toggle';
-            fallbackButton.className = 'theme-toggle';
-            fallbackButton.innerHTML = '<i data-lucide="sun" class="w-5 h-5"></i>';
-            document.body.appendChild(fallbackButton);
-            this.themeToggleButtons = [fallbackButton];
+            console.warn('No theme toggle buttons found. Make sure to include theme toggle buttons in your HTML.');
+            return;
         }
 
-        this.updateThemeIcon();
+        if (this.themeToggleButtons.length > 0) {
+            this.updateThemeIcon();
+        }
     }
 
     bindEvents() {
-        this.themeToggleButtons.forEach(button => {
-            if (button) {
-                button.addEventListener('click', () => this.toggleTheme());
-            }
-        });
+        if (this.themeToggleButtons && this.themeToggleButtons.length > 0) {
+            this.themeToggleButtons.forEach(button => {
+                if (button) {
+                    button.addEventListener('click', () => this.toggleTheme());
+                }
+            });
+        }
     }
 
     applyTheme() {
